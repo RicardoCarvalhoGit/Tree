@@ -36,11 +36,6 @@
 }
 
 .first_content {
-    display: flex;
-}
-
-.second_content {
-    position: absolute;
     display: none;
 }
 
@@ -86,7 +81,7 @@
     padding: 10px 50px;
     cursor: pointer;
     font-weight: 500;
-    width: 210px;
+    width: 222px;
     align-self: center;
     border: none;
     margin-top: 1rem;
@@ -136,4 +131,23 @@
     color: rgba(59, 120, 97, 0.75);
     margin: 0 5px;
     cursor: pointer;
+}
+
+/* SECOND CONTENT */
+
+.second_content {
+    position: absolute;
+    display: flex;
+}
+
+.forgotten_password {
+    font-size: 14px;
+    font-weight: 300;
+    color: #3B7861;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.forgotten_password:hover {
+    text-decoration: underline;
 }
