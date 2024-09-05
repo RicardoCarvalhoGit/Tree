@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(59, 120, 97, 0.20);
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: #3B7861;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.first_content {
+    display: flex;
+}
+
+.second_content {
+    position: absolute;
+    display: none;
+}
+
+.first_column {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.second_column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.title_primary {
+    color:#fff
+}
+
+.title_secondary {
+    color: #3B7861;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 30px;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 210px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+
+.btn_primary {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.btn_primary:hover {
+    background-color: #fff;
+    color: #3B7861;
+}
+
+.btn_secondary {
+    background-color: #3B7861;
+    border: 2px solid #3B7861;
+}
+
+.btn_secondary:hover {
+    background-color: #fff;
+    color: #3B7861;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+.label_input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.icon_modify {
+    color: rgba(59, 120, 97, 0.75);
+    margin: 0 5px;
+    cursor: pointer;
+}
