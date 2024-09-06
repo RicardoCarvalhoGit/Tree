@@ -31,12 +31,17 @@
     width: 40%;
     height: 100%;
     background-color: #3B7861;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-radius: 15px;
+
+    left: 0;
 }
 
 .first_content {
-    display: none;
+    display: flex;
+}
+
+.first_content .second_column {
+    z-index: 12;
 }
 
 .first_column {
@@ -90,6 +95,7 @@
 .btn_primary {
     background-color: transparent;
     border: 2px solid #fff;
+    transition: background-color 0.5s;
 }
 
 .btn_primary:hover {
@@ -100,11 +106,18 @@
 .btn_secondary {
     background-color: #3B7861;
     border: 2px solid #3B7861;
+    transition: background-color 0.5s;
 }
 
 .btn_secondary:hover {
     background-color: #fff;
     color: #3B7861;
+}
+
+input:-webkit-autofill 
+{    
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
 }
 
 .form {
@@ -140,6 +153,16 @@
     display: flex;
 }
 
+.second_content .first_column {
+    order: 2;
+    z-index: -1;
+}
+
+.second_content .second_column {
+    order: 1;
+    z-index: -1;
+}
+
 .forgotten_password {
     font-size: 14px;
     font-weight: 300;
@@ -150,4 +173,28 @@
 
 .forgotten_password:hover {
     text-decoration: underline;
+}
+
+.cpf_sign_in_js .first_content .first_column,
+.cpf_sign_in_js .first_content .second_column {
+    z-index: -1;
+}
+
+.cpf_sign_in_js .second_content .first_column,
+.cpf_sign_in_js .second_content .second_column {
+    z-index: 12;
+}
+
+.cpf_sign_in_js .content::before {
+    left: 60%;
+}
+
+.cnpj_sign_in_js .second_content .first_column,
+.cnpj_sign_in_js .second_content .second_column {
+    z-index: -1;
+}
+
+.cnpj_sign_in_js .first_content .first_column,
+.cnpj_sign_in_js .first_content .second_column {
+    z-index: 12;
 }
