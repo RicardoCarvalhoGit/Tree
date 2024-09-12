@@ -346,3 +346,158 @@ input:-webkit-autofill
         width: 40%;
     }
 }
+
+@media screen and (max-width: 925px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+
+    .first_content, .second_content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .cpf_sign_in_js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+    }
+
+    .first_column, .second_column {
+        width: 100%;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    @keyframes deslocamentoEsq {
+
+        0% {
+            top: 0;
+            opacity: 1;
+            z-index: 12;
+        }
+    
+        25% {
+            top: -27,5px;
+            opacity: .75;
+            z-index: 12;
+        }
+    
+        50% {
+            top: -55px;
+            opacity: .5;
+            z-index: 12;
+        }
+    
+        75% {
+            top: -82,5px;
+            opacity: .25;
+            z-index: 12;
+        }
+    
+        100% {
+            top: -110px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+    @keyframes deslocamentoDir {
+    
+        0% {
+            top: -110px;
+            opacity: 1;
+            z-index: 12;
+        }
+    
+        25% {
+            top: -82.5px;
+            opacity: .75;
+            z-index: 12;
+        }
+    
+        50% {
+            top: -55px;
+            opacity: .5;
+            z-index: 12;
+        }
+    
+        75% {
+            top: -27.5px;
+            opacity: .25;
+            z-index: 12;
+        }
+    
+        100% {
+            top: 0x;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+    @keyframes slideIn {
+        
+        0% {
+            top: 0;
+            height: 40%;
+        }
+    
+        25% {
+            top: 15%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 30%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        100% {
+            top: 60%;
+            height: 40%;
+        }
+    }
+    
+    @keyframes slideOut {
+        
+        0% {
+            top: 60%;
+            height: 40%;
+        }
+    
+        25% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 30%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 15%;
+            height: 50%;
+        }
+    
+        100% {
+            top: 0;
+            height: 40%;
+        }
+    }
+}
