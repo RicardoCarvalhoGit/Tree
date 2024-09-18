@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(59, 120, 97, 0.20);
+}
+
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-color: #3B7861;
+    border-radius: 15px;
+}
+
+.first_content {
+    display: flex;
+}
+
+.first_content .second_column {
+    z-index: 12;
+}
+
+.first_column {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.second_column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.title_primary {
+    color:#fff
+}
+
+.title_secondary {
+    color: #3B7861;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 30px;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 222px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+
+.btn_primary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    transition: background-color 0.5s;
+}
+
+.btn_primary:hover {
+    background-color: #fff;
+    color: #3B7861;
+}
+
+.btn_secondary {
+    background-color: #3B7861;
+    border: 2px solid #3B7861;
+    transition: background-color 0.5s;
+}
+
+.btn_secondary:hover {
+    background-color: #fff;
+    color: #3B7861;
+}
+
+input:-webkit-autofill 
+{    
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+.label_input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.icon_modify {
+    color: rgba(59, 120, 97, 0.75);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* SECOND CONTENT */
+
+.second_content {
+    position: absolute;
+    display: flex;
+}
+
+.second_content .first_column {
+    order: 2;
+    z-index: -1;
+}
+
+.second_content .second_column {
+    order: 1;
+    z-index: -1;
+}
+
+.forgotten_password {
+    font-size: 14px;
+    font-weight: 300;
+    color: #3B7861;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.forgotten_password:hover {
+    text-decoration: underline;
+}
+
+.cpf_sign_up_js .first_content .first_column {
+    z-index: -1;
+}
+
+.cpf_sign_up_js .second_content .second_column {
+    z-index: 11;
+}
+
+.cpf_sign_up_js .second_content .first_column {
+    z-index: 13;
+}
+
+.cpf_sign_up_js .content::before {
+    left: 60%;
+    animation: slideIn 1s;
+    z-index: 12;
+}
+
+.cnpj_sign_up_js .content::before {
+    animation: slideOut 1s;
+    z-index: 12;
+}
+
+.cnpj_sign_up_js .second_content .first_column {
+    z-index: -1;
+}
+
+.cnpj_sign_up_js .first_content .second_column {
+    z-index: 11;
+}
+
+.cnpj_sign_up_js .first_content .first_column {
+    z-index: 13;
+}
+
+/* DESLOCAMENTO CONTEUDO ATRAS DO CONTENT BEFORE */
+
+.cpf_sign_up_js .first_content .second_column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq .5s;
+}
+
+.cnpj_sign_up_js .second_content .second_column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoDir .5s;
+}
+
+
+/* ANIMAÇÃO CSS PARA CONTEUDO */
+
+@keyframes deslocamentoEsq {
+
+    0% {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -27,5px;
+        opacity: .75;
+        z-index: 12;
+    }
+
+    50% {
+        left: -55px;
+        opacity: .5;
+        z-index: 12;
+    }
+
+    75% {
+        left: -82,5px;
+        opacity: .25;
+        z-index: 12;
+    }
+
+    100% {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDir {
+
+    0% {
+        left: -110px;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -82.5px;
+        opacity: .75;
+        z-index: 12;
+    }
+
+    50% {
+        left: -55px;
+        opacity: .5;
+        z-index: 12;
+    }
+
+    75% {
+        left: -27.5px;
+        opacity: .25;
+        z-index: 12;
+    }
+
+    100% {
+        left: 0x;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes slideIn {
+    
+    0% {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 15%;
+        width: 50%;
+    }
+
+    50% {
+        left: 30%;
+        width: 60%;
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    100% {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideOut {
+    
+    0% {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 30%;
+        width: 60%;
+    }
+
+    75% {
+        left: 15%;
+        width: 50%;
+    }
+
+    100% {
+        left: 0;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+
+    .first_content, .second_content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .cpf_sign_up_js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+    }
+
+    .first_column, .second_column {
+        width: 100%;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    @keyframes deslocamentoEsq {
+
+        0% {
+            top: 0;
+            opacity: 1;
+            z-index: 12;
+        }
+    
+        25% {
+            top: -27,5px;
+            opacity: .75;
+            z-index: 12;
+        }
+    
+        50% {
+            top: -55px;
+            opacity: .5;
+            z-index: 12;
+        }
+    
+        75% {
+            top: -82,5px;
+            opacity: .25;
+            z-index: 12;
+        }
+    
+        100% {
+            top: -110px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+    @keyframes deslocamentoDir {
+    
+        0% {
+            top: -110px;
+            opacity: 1;
+            z-index: 12;
+        }
+    
+        25% {
+            top: -82.5px;
+            opacity: .75;
+            z-index: 12;
+        }
+    
+        50% {
+            top: -55px;
+            opacity: .5;
+            z-index: 12;
+        }
+    
+        75% {
+            top: -27.5px;
+            opacity: .25;
+            z-index: 12;
+        }
+    
+        100% {
+            top: 0x;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    
+    @keyframes slideIn {
+        
+        0% {
+            top: 0;
+            height: 40%;
+        }
+    
+        25% {
+            top: 15%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 30%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        100% {
+            top: 60%;
+            height: 40%;
+        }
+    }
+    
+    @keyframes slideOut {
+        
+        0% {
+            top: 60%;
+            height: 40%;
+        }
+    
+        25% {
+            top: 45%;
+            height: 50%;
+        }
+    
+        50% {
+            top: 30%;
+            height: 60%;
+        }
+    
+        75% {
+            top: 15%;
+            height: 50%;
+        }
+    
+        100% {
+            top: 0;
+            height: 40%;
+        }
+    }
+}
