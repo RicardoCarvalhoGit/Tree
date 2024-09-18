@@ -1,0 +1,372 @@
+body {
+    background-image: url(../../../assets/images/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(252, 249, 249);
+    /* Define a cor de fundo do corpo da página como preto */
+    margin: 5px;
+    /* Remove ou não a margem padrão do corpo */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    /* Define a família de fontes */
+    -webkit-font-smoothing: antialiased;
+    /* Suaviza as fontes no WebKit */
+    -moz-osx-font-smoothing: grayscale;
+    /* Suaviza as fontes no macOS */
+}
+
+.Home-header {
+    display: flex;
+    /* Define o layout flexível para o cabeçalho */
+    justify-content: center;
+    /* Centraliza os itens no cabeçalho */
+    align-items: center;
+    /* Alinha os itens no centro verticalmente */
+    padding: 10px;
+    /* Adiciona 10 pixels de preenchimento ao cabeçalho */
+    background-color: #3B7861;
+    /* Define a cor de fundo do cabeçalho */
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    /* Inclui o padding e a borda na largura total */
+    text-align: center;
+    /* Centraliza o texto */
+    border-radius: 10px;
+}
+
+
+.logo-container {
+    display: flex;
+    /* Define o layout flexível para o contêiner da logo */
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px;
+    /* Define a altura da logo */
+    margin-right: 15px;
+    /* Adiciona 15 pixels de margem à direita da logo */
+}
+
+.nav-links {
+    display: flex;
+    /* Define o layout flexível para os links de navegação */
+    justify-content: center;
+    /* Centraliza os links de navegação */
+    flex-grow: 1;
+    /* Permite que os links de navegação cresçam para ocupar o espaço disponível */
+    font-size: 16px;
+    transition: font-size 0.2s ease;
+    font-family: fantasy;
+    margin-top: 20px;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+.nav-links a {
+
+    margin: 0 10px;
+    /* Adiciona 10 pixels de margem horizontal aos links */
+    color: rgb(0, 0, 0);
+    /* Define a cor do texto dos links como branco */
+    text-decoration: none;
+    /* Remove a decoração padrão dos links */
+}
+
+.auth-buttons {
+    display: flex;
+    /* Define o layout flexível para os botões de autenticação */
+    gap: 10px;
+    /* Adiciona um espaço de 10 pixels entre os botões */
+}
+
+.signup-button,
+.login-button {
+    background-color: #61dafb;
+    /* Define a cor de fundo dos botões */
+    border: none;
+    /* Remove a borda dos botões */
+    padding: 20px;
+    /* Adiciona 20 pixels de preenchimento aos botões */
+    color: black;
+    /* Define a cor do texto dos botões como preto */
+    cursor: pointer;
+    /* Define o cursor como ponteiro ao passar sobre os botões */
+    border-radius: 5px;
+    /* Adiciona bordas arredondadas aos botões */
+}
+
+.signup-button:hover,
+.login-button:hover {
+    background-color: #21a1f1;
+    /* Altera a cor de fundo dos botões ao passar o mouse sobre eles */
+}
+
+.content {
+
+    display: flex;
+    flex-direction: row;
+    /* Alinha os itens verticalmente */
+    gap: 20px;
+    /* Espaçamento entre as divs */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* Estilo para cada item */
+.item {
+    display: flex;
+    /* Define o layout como flexível */
+    ;
+    flex-direction: row;
+    /* Alinha a imagem e o texto verticalmente */
+    gap: 10px;
+    /* Espaçamento entre a imagem e o texto */
+    padding: 10px;
+    /* Adiciona espaçamento interno */
+    border-radius: 10px;
+    width: 50%;
+    /* Define a largura da div */
+    height: 350px;
+    /* Define a altura da div */
+    border: 1px solid;
+    /* Define a largura da borda */
+    border-color: #00ff55;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 50%;
+    height: 350px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.i {
+    width: 400px;
+    /* Define a largura da imagem */
+    height: 250px;
+    /* Define a altura da imagem */
+    border-radius: 10px;
+}
+
+p {
+    margin: left;
+}
+
+.container {
+    display: flex;
+    /* Define o layout como flexível */
+    flex-direction: column;
+    /* Alinha os itens verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+}
+
+/* Estilo para a imagem do cabeçalho */
+.header-image {
+    position: relative;
+    /* Define a posição relativa para o container da imagem */
+    width: 100%;
+    /* Largura total */
+    height: 300px;
+    /* Altura da imagem */
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.header-image img {
+    width: 100%;
+    /* Largura total da imagem */
+    height: 100%;
+    /* Altura total da imagem */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir todo o espaço */
+    border-radius: 10px;
+}
+
+/* Estilo para o texto e o botão sobre a imagem */
+.overlay {
+    position: absolute;
+    /* Define a posição absoluta para o overlay */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta a posição para o centro exato */
+    text-align: center;
+    /* Centraliza o texto */
+
+}
+
+.overlay h1 {
+
+    color: #fff;
+    /* Cor do texto */
+    text-shadow: 0 0 10px #fff,
+        /* Brilho mais próximo */
+        0 0 20px #3B7861,
+        /* Brilho médio */
+        0 0 30px #3B7861,
+        /* Brilho forte */
+        0 0 40px #3B7861,
+        0 0 50px #3B7861;
+
+
+    margin: 0;
+    /* Remove a margem padrão */
+    font-size: 2em;
+    /* Tamanho da fonte */
+}
+
+.cta-button {
+    margin-top: 10px;
+    /* Espaçamento superior */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    background-color: rgb(40, 143, 95);
+    /* Cor do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remove a borda */
+    cursor: pointer;
+    /* Cursor de ponteiro ao passar o mouse */
+    --color: #00A97F;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: black;
+    z-index: 1;
+}
+
+.cta-button::before,
+.cta-button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.cta-button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.cta-button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.cta-button::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.cta-button:hover {
+    color: #218838;
+    /* Cor do botão ao passar o mouse */
+}
+
+.cta-button:active {
+    filter: brightness(.8);
+}
+
+
+
+.input-group {
+    position: relative;
+}
+
+.input {
+    border: solid 1.5px #9e9e9e;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 10px;
+}
+
+.user-label {
+    position: absolute;
+    left: 15px;
+    color: #000000;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+}
+
+.input:focus~label,
+input:valid~label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #212121;
+    padding: 0 .2em;
+    color: #2196f3;
+}
+
+.footer {
+    text-align: center;
+    /* Centraliza o texto no rodapé */
+    padding: 10px;
+    /* Adiciona 10 pixels de preenchimento ao rodapé */
+    background-color: rgb(40, 143, 95);
+    /* Define a cor de fundo do rodapé */
+    color: white;
+    /* Define a cor do texto do rodapé como branco */
+    border: none;
+}

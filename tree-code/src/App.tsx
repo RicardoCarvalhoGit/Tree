@@ -1,10 +1,10 @@
 import React from 'react';
-import SignIn from './components/pages/signIn/SignInComponent';
+import HomePage from './components/pages/home/HomePageComponent';
 
 
 function App() {
   return (
-    <SignIn />
+    <HomePage />
   )
 }
 
