@@ -3,44 +3,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgb(252, 249, 249);
-    /* Define a cor de fundo do corpo da página como preto */
-    margin: 5px;
-    /* Remove ou não a margem padrão do corpo */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    /* Define a família de fontes */
-    -webkit-font-smoothing: antialiased;
-    /* Suaviza as fontes no WebKit */
-    -moz-osx-font-smoothing: grayscale;
-    /* Suaviza as fontes no macOS */
-}
-
-.Home-header {
-    display: flex;
-    /* Define o layout flexível para o cabeçalho */
-    justify-content: center;
-    /* Centraliza os itens no cabeçalho */
-    align-items: center;
-    /* Alinha os itens no centro verticalmente */
-    padding: 10px;
-    /* Adiciona 10 pixels de preenchimento ao cabeçalho */
-    background-color: #3B7861;
-    /* Define a cor de fundo do cabeçalho */
-    width: 100%;
-    height: 120px;
-    box-sizing: border-box;
-    /* Inclui o padding e a borda na largura total */
-    text-align: center;
-    /* Centraliza o texto */
-    border-radius: 10px;
-}
-
-
-.logo-container {
-    display: flex;
-    /* Define o layout flexível para o contêiner da logo */
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
 }
 
 .logo {
@@ -48,62 +10,6 @@ body {
     /* Define a altura da logo */
     margin-right: 15px;
     /* Adiciona 15 pixels de margem à direita da logo */
-}
-
-.nav-links {
-    display: flex;
-    /* Define o layout flexível para os links de navegação */
-    justify-content: center;
-    /* Centraliza os links de navegação */
-    flex-grow: 1;
-    /* Permite que os links de navegação cresçam para ocupar o espaço disponível */
-    font-size: 16px;
-    transition: font-size 0.2s ease;
-    font-family: fantasy;
-    margin-top: 20px;
-}
-
-a:hover {
-    font-size: 20px;
-}
-
-.nav-links a {
-
-    margin: 0 10px;
-    /* Adiciona 10 pixels de margem horizontal aos links */
-    color: rgb(0, 0, 0);
-    /* Define a cor do texto dos links como branco */
-    text-decoration: none;
-    /* Remove a decoração padrão dos links */
-}
-
-.auth-buttons {
-    display: flex;
-    /* Define o layout flexível para os botões de autenticação */
-    gap: 10px;
-    /* Adiciona um espaço de 10 pixels entre os botões */
-}
-
-.signup-button,
-.login-button {
-    background-color: #61dafb;
-    /* Define a cor de fundo dos botões */
-    border: none;
-    /* Remove a borda dos botões */
-    padding: 20px;
-    /* Adiciona 20 pixels de preenchimento aos botões */
-    color: black;
-    /* Define a cor do texto dos botões como preto */
-    cursor: pointer;
-    /* Define o cursor como ponteiro ao passar sobre os botões */
-    border-radius: 5px;
-    /* Adiciona bordas arredondadas aos botões */
-}
-
-.signup-button:hover,
-.login-button:hover {
-    background-color: #21a1f1;
-    /* Altera a cor de fundo dos botões ao passar o mouse sobre eles */
 }
 
 .content {
@@ -227,7 +133,6 @@ p {
     /* Ajusta a posição para o centro exato */
     text-align: center;
     /* Centraliza o texto */
-
 }
 
 .overlay h1 {
@@ -242,8 +147,6 @@ p {
         /* Brilho forte */
         0 0 40px #3B7861,
         0 0 50px #3B7861;
-
-
     margin: 0;
     /* Remove a margem padrão */
     font-size: 2em;
@@ -274,7 +177,6 @@ p {
     font-weight: 400;
     font-size: 17px;
     border: 1px solid;
-    font-family: inherit;
     text-transform: uppercase;
     color: black;
     z-index: 1;
@@ -357,16 +259,4 @@ input:valid~label {
     background-color: #212121;
     padding: 0 .2em;
     color: #2196f3;
-}
-
-.footer {
-    text-align: center;
-    /* Centraliza o texto no rodapé */
-    padding: 10px;
-    /* Adiciona 10 pixels de preenchimento ao rodapé */
-    background-color: rgb(40, 143, 95);
-    /* Define a cor de fundo do rodapé */
-    color: white;
-    /* Define a cor do texto do rodapé como branco */
-    border: none;
 }

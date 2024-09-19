@@ -1,24 +1,9 @@
 import React from 'react';
 import './HomePageComponent.modules.css';
 
-const HomePage: React.FC = () => {
+function HomePage () {
     return (
         <div className="Home">
-            <header className="Home-header">
-                <div className="logo-container">
-                    <h3>ECOTREE</h3>
-                    <nav className="nav-links">
-                        <a href="https://youtu.be/lJBcZHzgD7s?si=ob_xQ2ZCRl-Ro4Fc">Home</a>
-                        <a href="https://youtu.be/QNYT9wVwQ8A?si=IoNKFFXeBWViSClQ">Ranking</a>
-                        <a href="#about">Sobre</a>
-                    </nav>
-                    <div className="auth-buttons">
-                        <button className="signup-button">Torne-se Eco</button>
-                        <button className="login-button">LoginEco</button>
-                    </div>
-                </div>
-            </header>
-
             <div className="container">
                 <div className="header-image">
                     <div className="overlay">
