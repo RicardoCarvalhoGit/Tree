@@ -49,12 +49,6 @@ const HomePage: React.FC = () => {
                     <p>Conecte-se com outras empresas ecológicas e compartilhe suas experiências e estratégias para um futuro mais verde.</p>
                 </div>
             </div>
-
-            <footer className="footer">
-
-                <p>&copy; 2024 - ecotree2024. Todos os direitos reservados.</p>
-            </footer>
-
         </div>
     );
 };
