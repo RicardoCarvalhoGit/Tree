@@ -5,6 +5,7 @@ import Footer from './components/layout/footer/FooterComponent';
 import SignIn from './components/pages/signIn/SignInComponent';
 import SignUp from './components/pages/signUp/SignUpComponent';
 import NavBar from './components/layout/navBar/NavBarComponent';
+import Ranking from './components/pages/ranking/RankingComponents';
 
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path='/' element={<HomePage />}/>
+        <Route path='/' element={<Ranking />}/>
         <Route path='/signIn' element={<SignIn />}/>
         <Route path='/signUp' element={<SignUp />}/>
+        <Route path='/ranking' element={<Ranking />}/>
       </Routes>
       <Footer />
     </Router>
