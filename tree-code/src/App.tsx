@@ -13,7 +13,7 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path='/' element={<Ranking />}/>
+        <Route path='/' element={<HomePage />}/>
         <Route path='/signIn' element={<SignIn />}/>
         <Route path='/signUp' element={<SignUp />}/>
         <Route path='/ranking' element={<Ranking />}/>
