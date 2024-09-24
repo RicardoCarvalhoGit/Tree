@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model cadastro_empresa {
+  id           Int    @id @default(autoincrement())
+  nome_emp     String
+  CNPJ_emp     String
+  email_emp    String
+  contato_emp  String
+  endereco_emp String
+  senha_emp    String
+}
+
+model cadastro_cliente {
+  cliente_id Int     @id @default(autoincrement())
+  nome       String
+  cpf        String  @unique
+  email      String  @unique
+  telefone   String?
+  senha      String
+}

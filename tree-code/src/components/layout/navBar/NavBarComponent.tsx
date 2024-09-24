@@ -12,7 +12,7 @@ function NavBar() {
                 </nav>
             </div>
             <div>
-                <button>Torne-se Tree</button>
+                <button onClick={() => window.location.href="signUp"}>Torne-se Tree</button>
             </div>
         </header>
     )
