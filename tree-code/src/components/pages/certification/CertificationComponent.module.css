@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+  
+  .heroSection {
+    padding: 20px;
+    text-align: center;
+    background: rgba(29, 167, 68, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    color: black;
+  }
+  
+  .card {
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(29, 167, 68, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+
+  .card h2 {
+    text-align: center;
+    color: black;
+  }
+  
+  .certificateSection {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 17px;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  }
+
+  .certificateSection h3 {
+    text-align: center;
+    color: #3B7861;
+  }
+  
+  .vantagens {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 17px;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  }
+  
+  .vantagens h2 {
+    text-align: center;
+    color: #3B7861;
+  }
+  
+  .vantagens ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .vantagens li {
+    margin-bottom: 15px;
+  }
+  
+  .vantagens li h3 {
+    color: #00A97F;
+  }
+  
+  .vantagens li p {
+    text-align: justify;
+    color: #333;
+  }
+  
+  .downloadButton {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: rgb(40, 143, 95);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .downloadButton:hover {
+    color: #218838;
+    background-color: white;
+    border: 1px solid #00A97F;
+  }
+  
+  .downloadButton:active {
+    filter: brightness(.8);
+  }
+  

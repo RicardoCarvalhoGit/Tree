@@ -9,7 +9,7 @@ function HomePage() {
                     <div className="header-image">
                         <div className="overlay">
                             <h1 className="">Bem-Vindo A Tree</h1>
-                            <button className="cta-button">Saiba Mais</button>
+                            <button onClick={() => window.location.href="Certification"}  className="cta-button">Saiba Mais</button>
                         </div>
                     </div>
                 </div>

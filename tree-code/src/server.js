@@ -2,7 +2,7 @@ const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const bcrypt = require('bcrypt');  // Para criptografar e comparar senhas
+const bcrypt = require('bcrypt');  
 
 const app = express();
 const prisma = new PrismaClient();
@@ -10,13 +10,11 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Função auxiliar para criptografar senhas
 const hashPassword = async (password) => {
   const saltRounds = 10;
   return await bcrypt.hash(password, saltRounds);
 };
 
-// Função auxiliar para comparar senhas
 const comparePasswords = async (plainPassword, hashedPassword) => {
   return await bcrypt.compare(plainPassword, hashedPassword);
 };
@@ -30,7 +28,7 @@ app.post('/empresa', async (req, res) => {
       return res.status(400).json({ error: "Todos os campos obrigatórios devem ser fornecidos" });
     }
 
-    const hashedPassword = await hashPassword(senha_emp); // Criptografando a senha
+    const hashedPassword = await hashPassword(senha_emp);
 
     const empresa = await prisma.cadastro_empresa.create({
       data: {
@@ -39,7 +37,7 @@ app.post('/empresa', async (req, res) => {
         email_emp,
         contato_emp,
         endereco_emp,
-        senha_emp: hashedPassword, // Armazenando a senha criptografada
+        senha_emp: hashedPassword,
       },
     });
 
@@ -58,7 +56,7 @@ app.post('/cliente', async (req, res) => {
       return res.status(400).json({ error: "Todos os campos são obrigatórios" });
     }
 
-    const hashedPassword = await hashPassword(senha); // Criptografando a senha
+    const hashedPassword = await hashPassword(senha); 
 
     const cliente = await prisma.cadastro_cliente.create({
       data: {
@@ -66,7 +64,7 @@ app.post('/cliente', async (req, res) => {
         cpf,
         email,
         telefone,
-        senha: hashedPassword, // Armazenando a senha criptografada
+        senha: hashedPassword, 
       },
     });
 
@@ -134,7 +132,6 @@ app.post('/login_cliente', async (req, res) => {
   }
 });
 
-// Servidor ouvindo na porta 3001
 app.listen(3001, () => {
   console.log("Servidor rodando na porta 3001");
 });

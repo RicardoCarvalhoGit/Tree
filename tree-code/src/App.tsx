@@ -6,6 +6,7 @@ import SignIn from './components/pages/signIn/SignInComponent';
 import SignUp from './components/pages/signUp/SignUpComponent';
 import NavBar from './components/layout/navBar/NavBarComponent';
 import Ranking from './components/pages/ranking/RankingComponents';
+import Certification from './components/pages/certification/certificationComponent';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/signIn' element={<SignIn />}/>
         <Route path='/signUp' element={<SignUp />}/>
         <Route path='/ranking' element={<Ranking />}/>
+        <Route path='/certification' element={<Certification />}/>
       </Routes>
       <Footer />
     </Router>

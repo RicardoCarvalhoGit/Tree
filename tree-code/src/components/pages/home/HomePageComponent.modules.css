@@ -7,18 +7,14 @@ body {
 
 .logo {
     height: 40px;
-    /* Define a altura da logo */
     margin-right: 15px;
-    /* Adiciona 15 pixels de margem à direita da logo */
 }
 
 .content {
 
     display: flex;
     flex-direction: row;
-    /* Alinha os itens verticalmente */
     gap: 20px;
-    /* Espaçamento entre as divs */
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 10px;
@@ -26,24 +22,16 @@ body {
     border-radius: 10px;
 }
 
-/* Estilo para cada item */
 .item {
     display: flex;
-    /* Define o layout como flexível */
     ;
     flex-direction: row;
-    /* Alinha a imagem e o texto verticalmente */
     gap: 10px;
-    /* Espaçamento entre a imagem e o texto */
     padding: 10px;
-    /* Adiciona espaçamento interno */
     border-radius: 10px;
     width: 50%;
-    /* Define a largura da div */
     height: 350px;
-    /* Define a altura da div */
     border: 1px solid;
-    /* Define a largura da borda */
     border-color: #00ff55;
     text-align: center;
     background-color: aliceblue;
@@ -80,9 +68,7 @@ body {
 
 .i {
     width: 400px;
-    /* Define a largura da imagem */
     height: 250px;
-    /* Define a altura da imagem */
     border-radius: 10px;
 }
 
@@ -92,80 +78,52 @@ p {
 
 .container {
     display: flex;
-    /* Define o layout como flexível */
     flex-direction: column;
-    /* Alinha os itens verticalmente */
     align-items: center;
-    /* Centraliza os itens horizontalmente */
 }
 
-/* Estilo para a imagem do cabeçalho */
 .header-image {
     position: relative;
-    /* Define a posição relativa para o container da imagem */
     width: 100%;
-    /* Largura total */
     height: 300px;
-    /* Altura da imagem */
     margin-top: 15px;
     margin-left: 10px;
 }
 
 .header-image img {
     width: 100%;
-    /* Largura total da imagem */
     height: 100%;
-    /* Altura total da imagem */
     object-fit: cover;
-    /* Ajusta a imagem para cobrir todo o espaço */
     border-radius: 10px;
 }
 
-/* Estilo para o texto e o botão sobre a imagem */
 .overlay {
     position: absolute;
-    /* Define a posição absoluta para o overlay */
     top: 50%;
-    /* Centraliza verticalmente */
     left: 50%;
-    /* Centraliza horizontalmente */
     transform: translate(-50%, -50%);
-    /* Ajusta a posição para o centro exato */
     text-align: center;
-    /* Centraliza o texto */
 }
 
 .overlay h1 {
 
     color: #fff;
-    /* Cor do texto */
     text-shadow: 0 0 10px #fff,
-        /* Brilho mais próximo */
         0 0 20px #3B7861,
-        /* Brilho médio */
         0 0 30px #3B7861,
-        /* Brilho forte */
         0 0 40px #3B7861,
         0 0 50px #3B7861;
     margin: 0;
-    /* Remove a margem padrão */
     font-size: 2em;
-    /* Tamanho da fonte */
 }
 
 .cta-button {
     margin-top: 10px;
-    /* Espaçamento superior */
     padding: 10px 20px;
-    /* Espaçamento interno */
     background-color: rgb(40, 143, 95);
-    /* Cor do botão */
     color: white;
-    /* Cor do texto do botão */
     border: none;
-    /* Remove a borda */
     cursor: pointer;
-    /* Cursor de ponteiro ao passar o mouse */
     --color: #00A97F;
     padding: 0.8em 1.7em;
     background-color: transparent;
@@ -214,7 +172,6 @@ p {
 
 .cta-button:hover {
     color: #218838;
-    /* Cor do botão ao passar o mouse */
 }
 
 .cta-button:active {
