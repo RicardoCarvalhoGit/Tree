@@ -17,6 +17,11 @@
     margin: 0;
 }
 
+.treeLogo {
+    width: 100px;
+    height: auto;
+}
+
 .navLinks {
     flex-grow: 1;
     display: flex;
