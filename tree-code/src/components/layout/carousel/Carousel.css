@@ -1,0 +1,125 @@
+.carousel-imagem {
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem */
+    width: 85%; /*define a largura*/
+    height: 500px; /*define a altura*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.carousel-overlay p {
+  color: #fff;
+  /* Cor do texto */
+  text-shadow: 0 0 10px #fff,
+      /* Brilho mais próximo */
+      0 0 20px #3B7861,
+      /* Brilho médio */
+      0 0 30px #3B7861,
+      /* Brilho forte */
+      0 0 40px #3B7861,
+      0 0 50px #3B7861;
+  margin: 0;
+  /* Remove a margem padrão */
+  font-size: 2em;
+  /* Tamanho da fonte */
+}
+
+
+
+.carousel-overlay {
+  position: absolute;
+  /* Define a posição absoluta para o overlay */
+  top: 50%;
+  /* Centraliza verticalmente */
+  left: 50%;
+  /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%);
+  /* Ajusta a posição para o centro exato */
+  text-align: center;
+}
+
+.carousel-button {
+  margin-top: 10px;
+  /* Espaçamento superior */
+  padding: 10px 20px;
+  /* Espaçamento interno */
+  background-color: rgb(40, 143, 95);
+  /* Cor do botão */
+  color: white;
+  /* Cor do texto do botão */
+  border: none;
+  /* Remove a borda */
+  cursor: pointer;
+  /* Cursor de ponteiro ao passar o mouse */
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  text-transform: uppercase;
+  color: black;
+  z-index: 1;
+}
+
+.carousel-button::before,
+.carousel-button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.carousel-button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.carousel-button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.carousel-button::before,
+.button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.carousel-button:hover {
+  color: #218838;
+  /* Cor do botão ao passar o mouse */
+}
+
+.carousel-button:active {
+  filter: brightness(.8);
+}
+/* Estiliza os botões de navegação do carrossel */
+/* Estiliza os botões de navegação do carrossel */
+  /* Garante que o contêiner do carrossel não permita que o conteúdo ultrapasse suas bordas */
+  .carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 85%;
+   margin: auto;
+   margin-top: 15px;
+  }
+
+.slide {
+    width: 50%; /* Define a largura da imagem */
+    height: 10px; /* Define a altura da imagem */
+    border-radius: 10px;
+    position: relative;
+}

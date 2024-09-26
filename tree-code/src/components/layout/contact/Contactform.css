@@ -1,0 +1,59 @@
+.contact-form-container {
+    position: relative; /* Define o contêiner como relativo para permitir posicionamento absoluto dos elementos filhos */
+    width: 100%; /* Define a largura do contêiner como 100% do elemento pai */
+    max-width: 100%; /* Define a largura máxima do contêiner, ajuste conforme necessário */
+    height: 300px; /* Define uma altura fixa para o contêiner, ajuste conforme necessário */
+    background-size: cover; /* Faz com que a imagem de fundo cubra todo o contêiner, mantendo a proporção */
+    background-position: center; /* Centraliza a imagem de fundo no contêiner */
+    display: flex; /* Utiliza Flexbox para alinhar os elementos filhos */
+    align-items: right; /* Alinha os elementos filhos verticalmente ao () contêiner */
+    justify-content: right; /* Alinha os elementos filhos horizontalmente ao centro do contêiner */
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items:end;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h4{
+    color: black;
+}
+
+label {
+    color: black;
+    display: block;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 15px;
+    font-family: "SF Pro";
+    padding: 0.875rem;
+    font-size: 1rem;
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 2.5px 3px 0 #000;
+    outline: none;
+    transition: ease 0.25s;
+    color:#000;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
