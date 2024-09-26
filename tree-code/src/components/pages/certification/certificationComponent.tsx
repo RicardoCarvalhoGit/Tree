@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './CertificationComponent.module.css';
+import DowloadButton from '../../layout/buttons/dowloadButton/DowloadButton';
 
 const Certification: React.FC = () => {
   return (
@@ -96,9 +97,7 @@ const Certification: React.FC = () => {
         </ul>
       </section>
 
-      <a href="#" className={styles.downloadButton}>
-        Baixar edital
-      </a>
+      <DowloadButton />
     </div>
   );
 };

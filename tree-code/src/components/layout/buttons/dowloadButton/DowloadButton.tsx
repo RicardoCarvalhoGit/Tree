@@ -1,9 +1,9 @@
 export default function DowloadButton() {
     const handleDownload = () => {
-        const fileUrl = '/path/to/your/file.pdf';
+        const fileUrl = '../../../../../public/assets/docs/edital.pdf';
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.download = 'arquivo.pdf';
+        link.download = 'edital.pdf';
         link.click();
     };
 
