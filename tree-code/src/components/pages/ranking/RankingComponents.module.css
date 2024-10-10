@@ -1,7 +1,5 @@
 .container{
-    background-image: url(../../../../public/assets/images/fundo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgba(59, 120, 97, 0.20);
     height: min-content;
     display: flex;
     justify-content: center;

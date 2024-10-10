@@ -1,12 +1,9 @@
-import React from 'react';
 import './HomePageComponent.modules.css';
 import Contactform from '../../layout/contact/Contactform';
-import Carousel from '../../layout/carousel/Caurosel';
 
-function HomePage () {
+function HomePage() {
     return (
         <div className="Home">
-            <Carousel />
             <div className="content">
                 <div className="card">
                     <img className='i' src="https://static.wixstatic.com/media/4893c9_75fee6ab617648c8bcad06359d16b195~mv2.jpeg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.jpeg" alt="Imagem 1" />
@@ -32,21 +29,21 @@ function HomePage () {
             <div className="content">
                 <div className="card">
                     <img className='i' src="https://www.terradecultivo.com.br/tcsolucoesambientais/wp-content/uploads/2021/07/sustentabilidade01.jpg" alt="Imagem 5" />
-                       <p>Ranking de Sustentabilidade:
+                    <p>Ranking de Sustentabilidade:
                         Algoritmo que classifica as empresas com base em critérios de sustentabilidade.
                         Atualização periódica do ranking com base nas novas certificações e auditorias.
                         Relatórios e Análises:
                         Relatórios detalhados sobre o desempenho das empresas certificadas.
                         Análises comparativas entre empresas e setores.</p>
-                       </div>
-            <div className="card">
+                </div>
+                <div className="card">
                     <img className='i' src="https://th.bing.com/th/id/OIP.Kbf-1LNDBMLUw2Ai931P_gHaE8?rs=1&pid=ImgDetMain" alt="Imagem 6" />
                     <p>Benefícios
-                    Transparência: Facilita o acesso a informações sobre práticas sustentáveis das empresas.
-                    Credibilidade: Aumenta a confiança dos consumidores nas empresas certificadas.
-                    Competitividade: Incentiva as empresas a melhorarem suas práticas para subir no ranking.
-                    Sustentabilidade: Promove um ambiente de negócios mais sustentável e responsável.</p>
-                </div>        
+                        Transparência: Facilita o acesso a informações sobre práticas sustentáveis das empresas.
+                        Credibilidade: Aumenta a confiança dos consumidores nas empresas certificadas.
+                        Competitividade: Incentiva as empresas a melhorarem suas práticas para subir no ranking.
+                        Sustentabilidade: Promove um ambiente de negócios mais sustentável e responsável.</p>
+                </div>
             </div>
             <Contactform />
         </div>

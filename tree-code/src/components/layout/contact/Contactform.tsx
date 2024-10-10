@@ -1,6 +1,5 @@
-import React from 'react';
 import './Contactform.css';
-import infoemail from '../../../assets/infoemail.png';
+import infoemail from '../../../assets/images/infoemail.png';
 
 function ContactForm() {
     return (
