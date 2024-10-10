@@ -1,10 +1,14 @@
 import styles from './NavBarComponent.module.css'
 import TreeLogo from '../../../assets/TreeLogo.png'
+import LinkButton from '../buttons/linkButton/LinkButton';
+import { Link } from 'react-router-dom';
 
-function NavBar() {
+const NavBar = () => {
     return (
         <header className={styles.navBar}>
-            <img src={TreeLogo} alt="TreeLogo" className={styles.treeLogo} />
+            <Link to="/">
+                <img src={TreeLogo} alt='TreeLogo' />
+            </Link>
             <div className={styles.navLinks}>
                 <nav>
                     <a href="/">Home</a>
@@ -13,10 +17,10 @@ function NavBar() {
                 </nav>
             </div>
             <div>
-                <button onClick={() => window.location.href="signUp"}>Torne-se Tree</button>
+                <LinkButton to='SignUp' text='Torne-se Tree'/>
             </div>
         </header>
     )
 }
 
-export default NavBar;
+export default NavBar

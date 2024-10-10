@@ -5,7 +5,6 @@
 .navBar {
     display: flex;
     align-items: center;
-    padding: 10px;
     background-color: #3B7861;
     width: 100%;
     height: 95px;
@@ -13,46 +12,27 @@
     justify-content: space-between;
 }
 
-.navBar h3 {
-    margin: 0;
-}
-
-.treeLogo {
-    width: 80px;
+.navBar img {
+    display: flex;
+    width: 100px;
     height: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .navLinks {
-    flex-grow: 1;
     display: flex;
     justify-content: center;
-}
-
-nav {
-    display: flex;
-    font-size: 16px;
-    justify-content: center;
-}
-
-a {
-    margin-left: 20px;
-    text-decoration: none;
-    transition: font-size 0.5s;
-}
-
-a:hover {
+    align-items: center;
     font-size: 20px;
 }
 
-button {
-    background-color: #1f4034;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: background-color 0.5s;
+.navLinks a {
+    margin: 0 8px;
+    text-decoration: none;
+    transition: ease;
 }
 
-button:hover {
-    background-color: #5ab592;
+.navLinks a:hover {
+    text-decoration: underline;
 }
