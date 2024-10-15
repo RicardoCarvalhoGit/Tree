@@ -1,0 +1,53 @@
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.check {
+    width: 100px;
+    height: auto;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 30px; 
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    max-width: 400px; 
+    width: 80%; 
+}
+
+.modalContent h2{
+    color: #3B7861;
+}
+
+.modalContent p{
+    color: #3B7861;
+}
+
+.closeButton {
+    background-color: #3B7861;
+    color: white;
+    border: 2px solid #3B7861;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+}
+
+.closeButton:hover {
+    background-color: #ffffff;
+    color: #3B7861;
+}

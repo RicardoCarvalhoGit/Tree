@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #ebf3e7;;
 }
@@ -51,7 +53,7 @@ body {
     justify-content: center;
     user-select: none;
     font-weight: bolder;
-    color: black;
+    color: black ;
 }
 
 .card:hover {
@@ -61,6 +63,10 @@ body {
 
 .card:active {
     transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.card p {
+    color: #3B7861;
 }
 
 .i {

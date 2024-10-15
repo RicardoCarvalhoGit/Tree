@@ -1,3 +1,5 @@
+import styles from "./DowloadButton.module.css"
+
 export default function DowloadButton() {
     const handleDownload = () => {
         const fileUrl = '/assets/docs/edital.pdf';
@@ -8,7 +10,7 @@ export default function DowloadButton() {
     };
 
     return (
-        <button onClick={handleDownload}>
+        <button onClick={handleDownload} className={styles.dowloadButton}>
             Baixar Arquivo
         </button>
     );
