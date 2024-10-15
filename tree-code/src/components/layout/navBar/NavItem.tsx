@@ -1,19 +1,23 @@
-import { Link } from 'react-router-dom'
-import styles from './NavBarComponent.module.css'
+import { NavLink } from 'react-router-dom';
 
 export interface NavItemProps {
     to: string;
     text: string;
+    className: string;
+    activeClassName: string;
 }
 
-export default function NavItem({ to, text }: NavItemProps) {
-
+export default function NavItem({ to, text, className, activeClassName }: NavItemProps) {
     return (
-        <li className={styles.navItem}>
-            <Link to={to}>
-                {text}
-            </Link>
-        </li>
-    )
-
+        <nav>
+            <NavLink 
+            to={to} 
+            className={({ isActive }) => 
+                isActive ? `${className} ${activeClassName}` : className
+            }
+        >
+            {text}
+        </NavLink>
+        </nav>
+    );
 }

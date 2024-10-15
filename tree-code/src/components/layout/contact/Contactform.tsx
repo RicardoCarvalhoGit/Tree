@@ -15,7 +15,7 @@ function ContactForm() {
                         <label htmlFor="message">Mensagem:</label>
                         <textarea typeof="message" name="message" required />
                     </div>
-                    <button type="submit">Enviar</button>
+                    <button className="sendEmailButton" type="submit">Enviar</button>
                 </form>
             </div>
         </div>

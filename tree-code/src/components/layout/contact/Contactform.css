@@ -44,7 +44,7 @@ textarea {
     color:#000;
 }
 
-button {
+.sendEmailButton {
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
@@ -53,6 +53,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.sendEmailButton:hover {
     background-color: #45a049;
 }
