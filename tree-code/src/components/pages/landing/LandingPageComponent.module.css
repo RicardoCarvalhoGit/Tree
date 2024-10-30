@@ -60,7 +60,7 @@
     width: fit-content;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1000px) {
     .cta h1 {
         font-size: 3.5rem;
     }
@@ -74,7 +74,7 @@
     }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 760px) {
     .cta h1 {
         font-size: 4rem;
     }
