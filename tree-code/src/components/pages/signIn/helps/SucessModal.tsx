@@ -1,6 +1,6 @@
 import React from 'react';
 import modalStyles from './SucessModal.module.css';
-import check from '../../../../assets/check.png'
+import check from '../../../../assets/images/check.png'
 
 interface SuccessModalProps {
   isOpen: boolean;

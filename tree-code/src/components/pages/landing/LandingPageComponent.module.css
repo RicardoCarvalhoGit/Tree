@@ -1,0 +1,61 @@
+.landingPage{
+    display: flex;
+    min-height: calc(100vh - 132px);
+    padding: 16px 5%;
+}
+
+.cta {
+    color: black;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    justify-content: center;
+}
+
+.cta h1 {
+    font-size: 4rem;
+}
+
+.cta h1 span {
+    color: #3B7861;
+}
+
+.cta p {
+    font-size: 1.2rem;
+}
+
+.signUpBtn {
+    background-color: #3B7861;
+    border: 2px solid #3B7861;
+    transition: all 0.5s ease;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    width: 75%;
+    font-weight: 600;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signUpBtn:hover {
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+    color: #3B7861;
+}
+
+.banner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 70%;
+    z-index: 2;
+}
+
+.banner img {
+    height: 100%;
+    width: fit-content;
+}

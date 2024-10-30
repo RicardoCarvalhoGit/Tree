@@ -7,6 +7,7 @@ import SignUp from './components/pages/signUp/SignUpComponent';
 import NavBar from './components/layout/navBar/NavBarComponent';
 import Ranking from './components/pages/ranking/RankingComponents';
 import Certification from './components/pages/certification/certificationComponent';
+import LandingPage from './components/pages/landing/LandingPageComponent';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path='/' element={<HomePage />}/>
+        <Route path='/' element={<LandingPage />}/>
         <Route path='/signIn' element={<SignIn />}/>
         <Route path='/signUp' element={<SignUp />}/>
         <Route path='/ranking' element={<Ranking />}/>

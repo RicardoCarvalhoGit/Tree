@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgba(59, 120, 97, 0.20);
 }
 
 .content {
@@ -80,27 +79,30 @@
     align-self: center;
     border: none;
     margin-top: 1rem;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn_primary {
     background-color: transparent;
     border: 2px solid #fff;
-    transition: background-color 0.5s;
+    transition: all 0.5s ease;
 }
 
 .btn_primary:hover {
     background-color: #fff;
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
     color: #3B7861;
 }
 
 .btn_secondary {
     background-color: #3B7861;
     border: 2px solid #3B7861;
-    transition: background-color 0.5s;
+    transition: all 0.5s;
 }
 
 .btn_secondary:hover {
     background-color: #fff;
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
     color: #3B7861;
 }
 
