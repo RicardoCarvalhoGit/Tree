@@ -1,13 +1,11 @@
-import LinkButton from "../../layout/buttons/linkButton/LinkButton"
-import styles from "./LandingPageComponent.module.css"
-import bannerImg from "../../../assets/images/homeBannerImg.png"
+import styles from "./LandingPageHome.module.css"
 
-export default function LandingPage () {
+import LinkButton from "../../../layout/buttons/linkButton/LinkButton"
+import bannerImg from "../../../../assets/images/homeBannerImg.png"
 
+export const LandingPageHome = () => {
     return (
         <section className={styles.landingPage}>
-
-
             <div className={styles.cta}>
                 <h1>
                     Faça Parte Da <span>Mudança!</span>
@@ -21,9 +19,6 @@ export default function LandingPage () {
             <div className={styles.banner}>
                 <img src={bannerImg} alt="sistrema de navegação na natureza" />
             </div>
-
-            
         </section>
     )
-
 }

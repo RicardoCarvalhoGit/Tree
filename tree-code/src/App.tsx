@@ -7,7 +7,7 @@ import SignUp from './components/pages/signUp/SignUpComponent';
 import NavBar from './components/layout/navBar/NavBarComponent';
 import Ranking from './components/pages/ranking/RankingComponents';
 import Certification from './components/pages/certification/certificationComponent';
-import LandingPage from './components/pages/landing/LandingPageComponent';
+import LandingPage from './components/pages/landingPage/LandingPageComponent';
 
 
 function App() {
