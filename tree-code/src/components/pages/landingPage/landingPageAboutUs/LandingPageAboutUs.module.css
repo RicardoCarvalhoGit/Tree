@@ -12,6 +12,7 @@
 }
 
 .aboutUs h3 {
+    text-align: center;
     font-size: 2rem;
 }
 .aboutUs span {
@@ -22,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100vw;
     text-align: center;
     margin-top: 36px;
 }
@@ -39,8 +39,8 @@
 }
 
 .mission, .vision, .values {   
-    width: 30%;
-    min-height: 300px;
+    width: 25%;
+    min-height: 350px;
     background-color: #fff;
     padding: 20px;
     align-content: center;
@@ -62,8 +62,26 @@
     list-style: none;
 }
 
-@media screen  and (max-width: 900) {
+@media screen and (max-width: 1000px) {
+
     .mvv {
         flex-wrap: wrap;
+    }
+
+    .mission, .vision, .values {
+        width: calc(50% - 50px);
+        min-height: 300px;
+    }
+
+    .values {
+        margin: 12px 0;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    .mission, .vision, .values {
+        width: calc(100% - 100px);
+        margin: 12px 0;
     }
 }
