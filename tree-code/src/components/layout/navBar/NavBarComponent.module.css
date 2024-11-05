@@ -1,7 +1,9 @@
 header {
     width: 100%;
     background-color: #3B7861;
-    z-index: 2;
+    z-index: 100;
+    position: sticky;
+    top: 0;
 }
 
 
@@ -11,6 +13,11 @@ header {
     width: 100%;
     justify-content: space-between;
     padding: 16px 5%;
+    transition: box-shadow 0.3s ease;
+}
+
+.navBarShadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .navBar img {
@@ -57,6 +64,7 @@ header {
     transition: ease;
     font-weight: 500;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 .navItem:hover {

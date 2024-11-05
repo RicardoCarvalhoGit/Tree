@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 export interface LinkButtonProps {
     to: string;
     text: string;
-    className?: string
+    className?: string;
+    onClick?: () => void;
 }
 
-export default function LinkButton({ to, text, className }: LinkButtonProps) {
+export default function LinkButton({ to, text, className, onClick }: LinkButtonProps) {
 
     return (
-        <Link className={className} to={to}>
+        <Link className={className} to={to} onClick={onClick}>
             {text}
         </Link>
     )

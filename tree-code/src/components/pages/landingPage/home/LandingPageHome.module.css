@@ -17,7 +17,7 @@
     font-size: 4rem;
 }
 
-.cta h1 span {
+.span {
     color: #3B7861;
 }
 
@@ -72,6 +72,16 @@
     .banner img {
         height: 75%;
     }
+
+    .signUpBtn {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .signUpBtn {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -87,5 +97,13 @@
         width: 100%;
         text-align: center;
         align-items: center;
+    }
+
+    .cta p {
+        font-size: 1.3rem;
+    }
+
+    .signUpBtn {
+        font-size: 1.4rem;
     }
 }

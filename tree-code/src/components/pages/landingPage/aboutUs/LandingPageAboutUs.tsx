@@ -1,13 +1,18 @@
 import styles from "./LandingPageAboutUs.module.css"
 
+import { Fade } from "react-awesome-reveal";
+
 import { GiEyeTarget, GiRocket, GiTechnoHeart } from "react-icons/gi";
 
-export const LandingPageAboutUs = () => {
+export const AboutUs = () => {
     return(
-        <section className={styles.aboutUs}>
-            <h2>Sobre <span>Nós</span></h2>
-            <h3>Um pouco sobre o que é ser <span>Tree</span></h3>
+        <section id="aboutUs" className={styles.aboutUs}>
+            <Fade direction="left" cascade={true} damping={0.1}>
+                <h2>Sobre Nós</h2>
+                <h3>Um pouco sobre o que é ser <span>Tree</span></h3>
+            </Fade>
 
+            <Fade direction="right" delay={500}>
             <div className={styles.mvv}>
                 <div className={styles.mission}>
                     <GiRocket className={styles.missionIcon}/>
@@ -32,6 +37,7 @@ export const LandingPageAboutUs = () => {
                     </ul>
                 </div>
             </div>
+            </Fade>
         </section>
     )
 }
