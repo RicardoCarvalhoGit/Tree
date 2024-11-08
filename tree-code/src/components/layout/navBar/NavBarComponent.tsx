@@ -34,7 +34,7 @@ export const NavBar = () => {
         if (location.pathname === '/' && scrollToSection) {
             scroller.scrollTo(scrollToSection, {
                 smooth: true,
-                offset: -170,
+                offset: -133,
                 duration: 500,
             });
             setScrollToSection(null);
@@ -56,10 +56,10 @@ export const NavBar = () => {
                             to={section.id}
                             spy={true}
                             smooth={true}
-                            offset={-170}
+                            offset={-133}
                             duration={500}
                             className={styles.navItem}
-                            activeClass={styles.activeNavItem}
+                            activeClass={location.pathname === '/signIn' || location.pathname === '/signUp' ? "" : styles.activeNavItem}
                             onClick={() => {
                                 if (location.pathname === '/signIn' || location.pathname === '/signUp') {
                                     setScrollToSection(section.id);
@@ -72,7 +72,7 @@ export const NavBar = () => {
                     ))}
                 </ul>
 
-                <LinkButton className={styles.webSignUpBtn} to='signIn' text='Torne-se Tree' />
+                <LinkButton className={styles.webSignUpBtn} to='signIn' text='Torne-se Tree' onClick={scrollToTop}/>
 
                 <button
                     className={styles.mobileBtn}
