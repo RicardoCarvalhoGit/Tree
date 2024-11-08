@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: #ebf3e7;;
+    background-color: #ebf3e7;
 }
 
 .logo {
@@ -10,7 +10,6 @@ body {
 }
 
 .content {
-
     display: flex;
     flex-direction: row;
     gap: 20px;

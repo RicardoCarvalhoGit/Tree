@@ -19,12 +19,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": "./", // Define a raiz do projeto
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["src/*"] // Configura o alias '@' para a pasta 'src'
     }
   },
   "include": [
     "src"
   ]
 }
+
