@@ -111,7 +111,10 @@ function SignIn () {
                                 required>
                             </input>
                         </label>
-                        <a href='signUp' className={styles.forgotten_password}>Não tem cadastro? Clique aqui para se cadastrar</a>
+                        <div className={styles.forgotten_password}>
+                        <a href='signUp'>Não tem cadastro?</a>
+                        <a href="#">Esqueceu sua senha?</a>
+                        </div>
                         <button type='submit' className={`${styles.btn} ${styles.btn_secondary}`}>Login</button>
                     </form>
                 </div>

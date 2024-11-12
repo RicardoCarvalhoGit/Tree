@@ -1,0 +1,74 @@
+/* CertificateRequestForm.module.css */
+
+.formContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.sectionTitle {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.5rem;
+    color: #333;
+}
+
+.inputField,
+.textAreaField,
+.checkboxField {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.textAreaField {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxLabel {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.fileUpload {
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+    background-color: #45a049;
+}
