@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 
 import HomePage from './components/pages/home/HomePageComponent';
 import Footer from './components/layout/footer/FooterComponent';
@@ -10,10 +10,12 @@ import Certification from './components/pages/certification/certificationCompone
 import LandingPage from './components/pages/landingPage/LandingPageComponent';
 
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <NavBar />
+    <>
+      {location.pathname !== '/about' && <NavBar />}
       <Routes>
         <Route path='/' element={<LandingPage />}/>
         <Route path='/signIn' element={<SignIn />}/>
@@ -23,8 +25,16 @@ function App() {
         <Route path='/about' element={<HomePage />}/>
       </Routes>
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
-  )
+  );
 }
 
 export default App;
