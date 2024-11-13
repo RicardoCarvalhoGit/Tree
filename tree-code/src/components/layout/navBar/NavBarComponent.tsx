@@ -1,5 +1,5 @@
 import styles from './NavBarComponent.module.css';
-import TreeLogoWhite from '../../../assets/images/TreeLogo.png';
+import TreeLogoWhite from '../../../assets/images/treeLogo.png';
 import LinkButton from '../buttons/linkButton/LinkButton';
 import { FaBars, FaX } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from 'react-router-dom';

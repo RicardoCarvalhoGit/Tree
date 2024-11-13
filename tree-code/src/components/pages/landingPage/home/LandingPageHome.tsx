@@ -13,7 +13,7 @@ export const Home = () => {
             <div className={styles.cta}>
             <Fade direction="left" cascade={true} damping={0.25}>
                 <h1>
-                    Faça Parte Da <WordRotate className={styles.span} duration={3000} words={["Mudança", "Evolução", "Esperança", "Preservação" ]} />
+                    Faça Parte Da <span><WordRotate duration={3000} words={["Mudança", "Evolução", "Esperança", "Preservação" ]} /></span>
                 </h1>
                 <p>
                     Mostre seu compromisso com o planeta e inspire outros a seguir seu exemplo.
