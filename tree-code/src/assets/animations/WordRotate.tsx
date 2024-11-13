@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
 
-import { cn } from "@/lib/utils";
+
 
 
 interface WordRotateProps {
@@ -40,7 +40,7 @@ export function WordRotate({
       <AnimatePresence mode="wait">
         <motion.h1
           key={words[index]}
-          className={cn(className)}
+        
           {...framerProps}
         >
           {words[index]}
