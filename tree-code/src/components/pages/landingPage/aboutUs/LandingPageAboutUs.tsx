@@ -4,7 +4,11 @@ import { Fade } from "react-awesome-reveal";
 
 import { GiEyeTarget, GiRocket, GiTechnoHeart } from "react-icons/gi";
 
-export const AboutUs = () => {
+interface AboutUsProps {
+    className?: string;
+}
+
+export const AboutUs = ({className}: AboutUsProps) => {
     return(
         <section id="aboutUs" className={styles.aboutUs}>
             <Fade direction="left" cascade={true} damping={0.1}>

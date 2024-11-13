@@ -2,6 +2,23 @@
     min-height: calc(100vh - 132px);
 }
 
+.partnersPage h2 {
+    font-size: 2.5rem;
+}
+
+.partnersPage h3 {
+    marker-start: 25px;
+    font-size: 2rem;
+}
+
+.partnersPage span {
+    color: #3B7861;
+}
+
 .header {
     text-align: center;
+}
+
+.header h3 {
+    margin-top: 20px;
 }
