@@ -3,11 +3,7 @@ import { Fade } from "react-awesome-reveal"
 import { PartnersMarquee } from "./Marquee/PartnersMarquee"
 import suaLogo from "../../../../assets/images/suaLogoAqui.png"
 
-interface partnersProps {
-    className?: string;
-}
-
-export const Partners = ({className}: partnersProps) => {
+export const Partners = () => {
 
     const logosArray = Array(6).fill([
         { src: suaLogo, alt: "Sua Logo aqui vetor" },

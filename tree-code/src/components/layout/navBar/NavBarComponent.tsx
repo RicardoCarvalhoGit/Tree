@@ -10,7 +10,7 @@ const sections = [
     { id: 'home', text: 'Início' },
     { id: 'partners', text: 'Parceiros' },
     { id: 'aboutUs', text: 'Sobre' },
-    { id: 'teams', text: 'Equipe' },
+    { id: 'team', text: 'Equipe' },
     { id: 'history', text: 'Origem' },
     { id: 'objectives', text: 'Metas' },
 ]
