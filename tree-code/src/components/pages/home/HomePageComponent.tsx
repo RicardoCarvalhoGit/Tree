@@ -1,9 +1,11 @@
 import './HomePageComponent.modules.css';
 import Contactform from '../../layout/contact/Contactform';
+import HomeNavBarComponent from '../../layout/homeNavBar/homeNavBarComponent';
 
 function HomePage() {
     return (
         <div className="Home">
+            <HomeNavBarComponent />
             <div className="content">
                 <div className="card">
                     <img className='i' src="https://static.wixstatic.com/media/4893c9_75fee6ab617648c8bcad06359d16b195~mv2.jpeg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.jpeg" alt="Imagem 1" />
