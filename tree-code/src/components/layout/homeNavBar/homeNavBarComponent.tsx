@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./HomeNavBarComponent.module.css";
-import TreeLogo from "../../../assets/images/TreeLogo.png"
+import TreeLogo from "../../../assets/images/treeLogo.png"
 
 const HomeNavBarComponent: React.FC = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);

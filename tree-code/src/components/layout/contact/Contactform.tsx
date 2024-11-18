@@ -1,5 +1,5 @@
 import './Contactform.css';
-import infoEmail from '../../../assets/images/infoemail.png';
+import infoEmail from '../../../assets/images/infoEmail.png';
 
 function ContactForm() {
     return (

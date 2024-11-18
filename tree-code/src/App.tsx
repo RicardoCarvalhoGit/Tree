@@ -8,6 +8,7 @@ import NavBar from './components/layout/navBar/NavBarComponent';
 import Ranking from './components/pages/ranking/RankingComponents';
 import Certification from './components/pages/certification/certificationComponent';
 import LandingPage from './components/pages/landingPage/LandingPageComponent';
+import CertificateRequestForm from './components/pages/certificationRequest/CertificateRequestForm';
 
 
 function AppContent() {
@@ -23,6 +24,7 @@ function AppContent() {
         <Route path='/ranking' element={<Ranking />}/>
         <Route path='/certification' element={<Certification />}/>
         <Route path='/about' element={<HomePage />}/>
+        <Route path='/certificationRequest' element={<CertificateRequestForm />}/>
       </Routes>
       <Footer />
     </>
