@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./RankingComponents.module.css"
 import { companies } from "./Company/Companies";
-
+import HomeNavBarComponent from "@/components/layout/homeNavBar/homeNavBarComponent";
 
 interface Company {
     position: number;
@@ -10,9 +10,9 @@ interface Company {
     descricao: string;
 }
 
-const Card: React.FC = () => {
+function Card() {
     return (
-    <div className={style.container}>
+        <div className={style.container}>
         <div className={style.card}>
         <div className={style.card_search}>
             <form >

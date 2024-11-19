@@ -16,7 +16,7 @@ function AppContent() {
 
   return (
     <>
-      {location.pathname !== '/about' && <NavBar />}
+      {(location.pathname !== '/about' && location.pathname !== '/certification') && <NavBar />}
       <Routes>
         <Route path='/' element={<LandingPage />}/>
         <Route path='/signIn' element={<SignIn />}/>

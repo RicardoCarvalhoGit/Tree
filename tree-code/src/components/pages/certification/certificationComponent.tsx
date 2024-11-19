@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './CertificationComponent.module.css';
 import DowloadButton from '../../layout/buttons/dowloadButton/DowloadButton';
+import HomeNavBarComponent from '@/components/layout/homeNavBar/homeNavBarComponent';
 
 const Certification: React.FC = () => {
   return (
     <div>
+      <HomeNavBarComponent />
       <header className={styles.heroSection}>
         <div className={styles.card}>
           <h2>Role para baixo para ver mais sobre nosso certificado.</h2>

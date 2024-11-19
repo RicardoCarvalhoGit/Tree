@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./HomeNavBarComponent.module.css";
-import TreeLogo from "../../../assets/images/treeLogo.png"
+import TreeLogo from "../../../assets/images/TreeLogo.png"
 
 const HomeNavBarComponent: React.FC = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -27,7 +27,7 @@ const HomeNavBarComponent: React.FC = () => {
               <li><a href="/">Home</a></li>
               <li><a href="/ranking">Ranking</a></li>
               <li><a href="/certification">Certificação</a></li>
-              <li><a href="/about">About</a></li>
+              <li><a href="/CertificationRequest">Solicite Sua Certificação</a></li>
             </ul>
           </div>
         )}
