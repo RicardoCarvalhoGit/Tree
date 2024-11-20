@@ -1,7 +1,7 @@
 import styles from "./LandingPageHome.module.css"
 
 import LinkButton from "../../../layout/buttons/linkButton/LinkButton"
-import bannerImg from "../../../../assets/images/homeBannerImg.png"
+import BannerImg from "../../../../assets/images/HomeBannerImg.png"
 import { Fade } from "react-awesome-reveal"
 import { WordRotate } from "@/assets/animations/WordRotate"
 
@@ -25,7 +25,7 @@ export const Home = () => {
             </div>
 
             <Fade direction="right" className={styles.banner}>
-                <img src={bannerImg} alt="sistrema de navegação na natureza" />
+                <img src={BannerImg} alt="sistrema de navegação na natureza" />
             </Fade>
         </section>
     )

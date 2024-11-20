@@ -1,12 +1,12 @@
 import styles from "./LandingPagePartners.module.css"
 import { Fade } from "react-awesome-reveal"
 import { PartnersMarquee } from "./Marquee/PartnersMarquee"
-import suaLogo from "../../../../assets/images/suaLogoAqui.png"
+import SuaLogo from "../../../../assets/images/SuaLogoAqui.png"
 
 export const Partners = () => {
 
     const logosArray = Array(6).fill([
-        { src: suaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
     ]).flat();    
 
     return (

@@ -1,9 +1,9 @@
 import './Contactform.css';
-import infoEmail from '../../../assets/images/infoemail.png';
+import InfoEmail from '../../../assets/images/InfoEmail.png';
 
 function ContactForm() {
     return (
-        <div className="contact-form-container" style={{ backgroundImage: `url(${infoEmail})` }}>
+        <div className="contact-form-container" style={{ backgroundImage: `url(${InfoEmail})` }}>
             <div className="contact-form">
                 <h4>Mande sua dúvida:</h4>
                 <form>
