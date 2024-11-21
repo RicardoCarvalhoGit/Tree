@@ -6,14 +6,14 @@ import styles from "./LandingPageObjectives.module.css"
 
 export const Objectives = () => {
     return (
-        <section id="objectives">
+        <section id="objectives" className={styles.objectives}>
             <Fade direction="left" cascade={true} damping={0.25} className={styles.objectivesHeader}>
                 <h2>Pra Onde Vamos</h2>
                 <h3>O que esperar da <span>Tree</span></h3>
             </Fade>
 
             <Fade direction="right" cascade={true} delay={500} damping={0.25}>
-                <div className={styles.objectives}>
+                <div className={styles.objectivesContainer}>
                     <div className={styles.first}>
                         <GiMegaphone className={styles.firstIcon} />
                         <h4>Ampliar a Concientização</h4>
@@ -23,8 +23,6 @@ export const Objectives = () => {
                             regiões.
                         </p>
                     </div>
-                </div>
-                <div className={styles.objectives}>
                     <div className={styles.second}>
                         <GiDiploma className={styles.secondIcon} />
                         <h4>Certificar 100 mil Empresas até 2030</h4>
@@ -34,8 +32,6 @@ export const Objectives = () => {
                             até o final da década.
                         </p>
                     </div>
-                </div>
-                <div className={styles.objectives}>
                     <div className={styles.third}>
                         <GiTreehouse className={styles.thirdIcon} />
                         <h4>Apoiar 100 Projetos de Reflorestamento</h4>
@@ -45,8 +41,6 @@ export const Objectives = () => {
                             críticas para a biodiversidade.
                         </p>
                     </div>
-                </div>
-                <div className={styles.objectives}>
                     <div className={styles.fourth}>
                         <GiFootsteps className={styles.fourthIcon} />
                         <h4>Reduzir a Pegada de Carbono</h4>

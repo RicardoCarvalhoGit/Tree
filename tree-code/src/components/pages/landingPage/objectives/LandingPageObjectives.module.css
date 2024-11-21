@@ -1,0 +1,71 @@
+.objectives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 132px);
+    gap: 24px;
+}
+
+.objectives h2 {
+    font-size: 2.5rem;
+}
+
+.objectives h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.objectives span {
+    color: #3B7861;
+}
+
+.objectivesHeader span {
+    font-size: 2.25rem;
+}
+
+.objectivesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.objectivesContainer h4 {
+    font-size: 1.5rem;
+    margin-top: 12px;
+    color: #3B7861;
+}
+
+.objectivesContainer span {
+    font-size: 1.25rem;
+}
+
+.objectivesContainer p {
+    font-size: 1rem;
+    margin-top: 24px;
+}
+
+.first,
+.second,
+.third, 
+.fourth {
+    width: 45%;
+    min-height: 236.4px;
+    background-color: #Fff;
+    padding: 20px;
+    align-content: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    margin: 12px 0;
+}
+
+.firstIcon,
+.secondIcon,
+.thirdIcon, 
+.fourthIcon {
+    font-size: 50px;
+    color: #3B7861;
+}
