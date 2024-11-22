@@ -108,6 +108,7 @@ function SignIn () {
                                 type='password'
                                 placeholder='Sua senha'
                                 value={formData.senha_emp}
+                                onChange={handleInputChange}
                                 required>
                             </input>
                         </label>
