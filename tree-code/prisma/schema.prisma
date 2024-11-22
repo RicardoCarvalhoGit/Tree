@@ -8,20 +8,20 @@ datasource db {
 }
 
 model cadastro_empresa {
-  id           Int    @id @default(autoincrement())
-  nome_emp     String
-  CNPJ_emp     String
-  email_emp    String
-  contato_emp  String
-  endereco_emp String
-  senha_emp    String
+  id           Int     @id @default(autoincrement()) 
+  nome_emp     String  @db.VarChar(255)             
+  CNPJ_emp     String  @unique                      
+  email_emp    String  @unique                     
+  contato_emp  String  @db.VarChar(50)             
+  endereco_emp String? @db.Text                     
+  senha_emp    String  @db.VarChar(255)             
 }
 
 model cadastro_cliente {
-  cliente_id Int     @id @default(autoincrement())
-  nome       String
-  cpf        String  @unique
-  email      String  @unique
-  telefone   String?
-  senha      String
+  id       Int     @id @default(autoincrement())    
+  nome     String  @db.VarChar(255)               
+  cpf      String  @unique                        
+  email    String  @unique                         
+  telefone String? @db.VarChar(50)                 
+  senha    String  @db.VarChar(255)                
 }
