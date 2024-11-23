@@ -8,20 +8,34 @@ datasource db {
 }
 
 model cadastro_empresa {
-  id           Int     @id @default(autoincrement()) 
-  nome_emp     String  @db.VarChar(255)             
-  CNPJ_emp     String  @unique                      
-  email_emp    String  @unique                     
-  contato_emp  String  @db.VarChar(50)             
-  endereco_emp String? @db.Text                     
-  senha_emp    String  @db.VarChar(255)             
+  id           Int     @id @default(autoincrement())
+  nome_emp     String  @db.VarChar(255)
+  CNPJ_emp     String  @unique
+  email_emp    String  @unique
+  contato_emp  String  @db.VarChar(50)
+  endereco_emp String? @db.Text
+  senha_emp    String  @db.VarChar(255)
 }
 
 model cadastro_cliente {
-  id       Int     @id @default(autoincrement())    
-  nome     String  @db.VarChar(255)               
-  cpf      String  @unique                        
-  email    String  @unique                         
-  telefone String? @db.VarChar(50)                 
-  senha    String  @db.VarChar(255)                
+  nome     String  @db.VarChar(255)
+  cpf      String  @unique
+  email    String  @unique
+  telefone String? @db.VarChar(50)
+  senha    String  @db.VarChar(255)
+  id       Int     @id @default(autoincrement())
+}
+
+model certificados {
+  id                      Int       @id @default(autoincrement())
+  razao_social            String    @db.Text
+  documento_indetificacao String?   @db.Text
+  cnpj                    String?   @db.Text
+  endereco                String?   @db.Text
+  setor                   String?   @db.Text
+  contato_nome            String?   @db.Text
+  contato_email           String?   @db.Text
+  contato_telefone        String?   @db.Text
+  particas_sustentaveis   String?   @db.Text
+  data_envio              DateTime? @db.Timestamp(0)
 }

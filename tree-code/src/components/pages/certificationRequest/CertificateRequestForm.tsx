@@ -34,10 +34,55 @@ const CertificateRequestForm: React.FC = () => {
         }
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Dados do formulário:", formData);
+    
+        try {
+            const response = await fetch('http://localhost:3001/api/certification-request', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    companyName: formData.companyName,
+                    cnpj: formData.cnpj,
+                    address: formData.address,
+                    sector: formData.sector,
+                    contactName: formData.contactName,
+                    contactEmail: formData.contactEmail,
+                    contactPhone: formData.contactPhone,
+                    motivation: formData.motivation,
+                }),
+            });
+    
+            if (response.ok) {
+                alert('Solicitação enviada com sucesso!');
+                setFormData({
+                    companyName: '',
+                    cnpj: '',
+                    address: '',
+                    sector: '',
+                    contactName: '',
+                    contactEmail: '',
+                    contactPhone: '',
+                    motivation: '',
+                    practices: {
+                        recycling: false,
+                        waterConservation: false,
+                        renewableEnergy: false,
+                    },
+                    additionalPractices: '',
+                    documents: null,
+                });
+            } else {
+                alert('Erro ao enviar a solicitação.');
+            }
+        } catch (error) {
+            console.error('Erro:', error);
+            alert('Ocorreu um erro ao enviar os dados.');
+        }
     };
+    
 
     return (
         <form onSubmit={handleSubmit} className={styles.formContainer}>
@@ -152,7 +197,7 @@ const CertificateRequestForm: React.FC = () => {
                     />
             </section>
 
-            <button type="submit" className={styles.submitButton}>Enviar Solicitação</button>
+            <button type="submit" onClick={handleSubmit} className={styles.submitButton}>Enviar Solicitação</button>
         </form>
     );
 };

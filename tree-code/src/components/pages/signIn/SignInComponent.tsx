@@ -64,7 +64,7 @@ function SignIn () {
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
-        navigate('/')
+        navigate('/about');
     }
 
     return (

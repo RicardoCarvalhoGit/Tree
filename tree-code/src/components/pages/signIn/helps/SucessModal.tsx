@@ -16,7 +16,7 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose }) => {
         <img src={Check} alt="check" className={modalStyles.check} />
         <h2>Login bem-sucedido!</h2>
         <button onClick={onClose} className={modalStyles.closeButton}>
-          Fechar
+          Continuar
         </button>
       </div>
     </div>

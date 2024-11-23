@@ -2,7 +2,8 @@ const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const bcrypt = require('bcrypt');  
+const bcrypt = require('bcrypt'); 
+const mysql = require('mysql2');
 
 const app = express();
 const prisma = new PrismaClient();
@@ -130,6 +131,44 @@ app.post('/login_cliente', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Erro ao fazer login", message: error.message });
   }
+});
+
+// Configuração do banco de dados
+const db = mysql.createConnection(process.env.DATABASE_URL);
+
+db.connect((err) => {
+  if (err) {
+      console.error('Erro ao conectar ao banco de dados:', err);
+  } else {
+      console.log('Conectado ao banco de dados!');
+  }
+});
+
+// Endpoint para receber os dados do formulário
+app.post('/api/certification-request', (req, res) => {
+  const {
+      companyName,
+      cnpj,
+      address,
+      sector,
+      contactName,
+      contactEmail,
+      contactPhone,
+      motivation,
+  } = req.body;
+
+  const sql = `INSERT INTO certificados
+      (razao_social, cnpj, endereco, setor, contato_nome, contato_email, contato_telefone, particas_sustentaveis)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+
+  db.query(sql, [companyName, cnpj, address, sector, contactName, contactEmail, contactPhone, motivation], (err, result) => {
+      if (err) {
+          console.error('Erro ao inserir dados:', err);
+          res.status(500).send('Erro ao salvar a solicitação.');
+      } else {
+          res.status(201).send('Solicitação salva com sucesso!');
+      }
+  });
 });
 
 app.listen(3001, () => {
