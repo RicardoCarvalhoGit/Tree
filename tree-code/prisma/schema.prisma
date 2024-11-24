@@ -37,5 +37,5 @@ model certificados {
   contato_email           String?   @db.Text
   contato_telefone        String?   @db.Text
   particas_sustentaveis   String?   @db.Text
-  data_envio              DateTime? @db.Timestamp(0)
+  status                  String    @default("pendente")
 }

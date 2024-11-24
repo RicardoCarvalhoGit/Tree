@@ -4,12 +4,14 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const bcrypt = require('bcrypt'); 
 const mysql = require('mysql2');
+const router = express.Router();
 
 const app = express();
 const prisma = new PrismaClient();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use("/api", router);
 
 const hashPassword = async (password) => {
   const saltRounds = 10;
@@ -168,6 +170,22 @@ app.post('/api/certification-request', (req, res) => {
       } else {
           res.status(201).send('Solicitação salva com sucesso!');
       }
+  });
+});
+
+// Endpoint para buscar solicitações
+app.get("/api/requests", (req, res) => {
+  const query = "SELECT * FROM certificados";
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error("Erro ao buscar as solicitações: ", err);
+      return res.status(500).json({ message: "Erro ao buscar solicitações" });
+    }
+    console.log("Resultados encontrados:", results);
+    if (results.length === 0) {
+      return res.status(404).json({ message: "Nenhuma solicitação encontrada" });
+    }
+    res.json(results);
   });
 });
 

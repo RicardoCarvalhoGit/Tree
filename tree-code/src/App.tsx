@@ -9,6 +9,7 @@ import Ranking from './components/pages/ranking/RankingComponents';
 import Certification from './components/pages/certification/certificationComponent';
 import LandingPage from './components/pages/landingPage/LandingPageComponent';
 import CertificateRequestForm from './components/pages/certificationRequest/CertificateRequestForm';
+import RequestViewComponent from './components/pages/requestView/RequestViewComponent';
 
 
 function AppContent() {
@@ -25,6 +26,7 @@ function AppContent() {
         <Route path='/certification' element={<Certification />}/>
         <Route path='/about' element={<HomePage />}/>
         <Route path='/certificationRequest' element={<CertificateRequestForm />}/>
+        <Route path='/requestView' element={<RequestViewComponent />}/>
       </Routes>
       <Footer />
     </>

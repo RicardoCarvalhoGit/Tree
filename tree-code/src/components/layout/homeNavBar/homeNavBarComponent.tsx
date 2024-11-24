@@ -24,7 +24,7 @@ const HomeNavBarComponent: React.FC = () => {
           <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : "sidebar"}`}>
             <button className={styles.closebtn} onClick={toggleSidebar}>✕</button>
             <ul>
-              <li><a href="/">Home</a></li>
+              <li><a href="/about">Home</a></li>
               <li><a href="/ranking">Ranking</a></li>
               <li><a href="/certification">Certificação</a></li>
               <li><a href="/CertificationRequest">Solicite Sua Certificação</a></li>
