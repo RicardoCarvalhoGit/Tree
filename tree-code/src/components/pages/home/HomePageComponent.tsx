@@ -4,52 +4,74 @@ import HomeNavBarComponent from '../../layout/homeNavBar/homeNavBarComponent';
 
 function HomePage() {
     return (
-        <div className="Home">
+        <>
             <HomeNavBarComponent />
-            <div className="content">
-                <div className="card">
-                    <img className='i' src="https://static.wixstatic.com/media/4893c9_75fee6ab617648c8bcad06359d16b195~mv2.jpeg/v1/fit/w_1000%2Ch_1000%2Cal_c%2Cq_80/file.jpeg" alt="Imagem 1" />
-                    <p>Transforme sua empresa em um ícone ecológico com nosso sistema inovador!</p>
-                </div>
-                <div className="card">
-                    <img className='i' src="https://th.bing.com/th/id/OIP.kmT55XXHwGxQLbUIQBSXdQHaE8?rs=1&pid=ImgDetMain" alt="Imagem 2" />
-                    <p>No mundo de hoje, onde a natureza está gritando por socorro, surge a EcoTree! Um sistema inovador que certifica empresas que realmente se importam com o planeta. Se você acha que sua empresa é a próxima grande em sustentabilidade, é hora de brilhar! Nosso objetivo é simples: classificar as empresas com base em suas ações ecológicas.</p>
-                </div>
-            </div>
+            <section className="hero">
+                <h1>Portal Empresarial de Certificações Sustentáveis</h1>
+                <p>
+                    Gerencie suas certificações ecológicas, acompanhe métricas e mantenha
+                    sua empresa em conformidade com os mais altos padrões de
+                    sustentabilidade.
+                </p>
+            </section>
 
-            <div className='content'>
-                <div className="card">
-                    <img className='i' src="https://th.bing.com/th/id/OIP.RreQxhP_3rsXey511pBZbgHaF7?rs=1&pid=ImgDetMain" alt="Imagem 3" />
-                    <p>Se você está fazendo a diferença, vamos te dar o reconhecimento que você merece! Junte-se a nós nessa jornada verde e descubra como sua empresa pode se destacar no ranking das mais ecológicas.</p>
+            <section className="enterprise-section">
+                <div className="enterprise-grid">
+                    <div className="stats-card">
+                        <div className="stats-number">5000+</div>
+                        <p>Árvores Preservadas</p>
+                    </div>
+                    <div className="stats-card">
+                        <div className="stats-number">98%</div>
+                        <p>Taxa de Aprovação</p>
+                    </div>
+                    <div className="stats-card">
+                        <div className="stats-number">10+</div>
+                        <p>Estados Atendidos</p>
+                    </div>
                 </div>
-                <div className="card">
-                    <img className='i' src="https://img.freepik.com/fotos-premium/negocios-sostenibles-o-negocios-verdes-ilustracion-vectorial-practicas-ecologicas_957479-20168.jpg" alt="Imagem 4" />
-                    <p>Participe de nossos workshops e eventos para aprender mais sobre práticas sustentáveis e como implementá-las em sua empresa.</p>
-                    <p>Conecte-se com outras empresas ecológicas e compartilhe suas experiências e estratégias para um futuro mais verde.</p>
+            </section>
+
+            <section className="features">
+                <div className="feature-card">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L3 9V20H21V9L12 2Z" fill="currentColor" />
+                    </svg>
+                    <h3>Gestão de Certificações</h3>
+                    <p>
+                        Plataforma completa para gerenciar todas as suas certificações
+                        ecológicas em um só lugar.
+                    </p>
                 </div>
-            </div>
-            <div className="content">
-                <div className="card">
-                    <img className='i' src="https://www.terradecultivo.com.br/tcsolucoesambientais/wp-content/uploads/2021/07/sustentabilidade01.jpg" alt="Imagem 5" />
-                    <p>Ranking de Sustentabilidade:
-                        Algoritmo que classifica as empresas com base em critérios de sustentabilidade.
-                        Atualização periódica do ranking com base nas novas certificações e auditorias.
-                        Relatórios e Análises:
-                        Relatórios detalhados sobre o desempenho das empresas certificadas.
-                        Análises comparativas entre empresas e setores.</p>
+                <div className="feature-card">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M21 11.5C21 16.75 12 21 12 21C12 21 3 16.75 3 11.5C3 6.25 7.02944 2 12 2C16.9706 2 21 6.25 21 11.5Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                    <h3>Relatórios Avançados</h3>
+                    <p>
+                        Análises detalhadas e insights sobre seu desempenho ambiental e
+                        conformidade.
+                    </p>
                 </div>
-                <div className="card">
-                    <img className='i' src="https://th.bing.com/th/id/OIP.Kbf-1LNDBMLUw2Ai931P_gHaE8?rs=1&pid=ImgDetMain" alt="Imagem 6" />
-                    <p>Benefícios
-                        Transparência: Facilita o acesso a informações sobre práticas sustentáveis das empresas.
-                        Credibilidade: Aumenta a confiança dos consumidores nas empresas certificadas.
-                        Competitividade: Incentiva as empresas a melhorarem suas práticas para subir no ranking.
-                        Sustentabilidade: Promove um ambiente de negócios mais sustentável e responsável.</p>
+                <div className="feature-card">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                            fill="currentColor"
+                        />
+                    </svg>
+                    <h3>Suporte Especializado</h3>
+                    <p>
+                        Equipe dedicada para auxiliar em todas as etapas do processo de
+                        certificação.
+                    </p>
                 </div>
-            </div>
-            <Contactform />
-        </div>
+            </section>
+        </>
     );
-};
+}
 
 export default HomePage;

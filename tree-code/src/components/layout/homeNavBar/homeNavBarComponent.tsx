@@ -8,6 +8,11 @@ const HomeNavBarComponent: React.FC = () => {
     const toggleSidebar = () => {
       setSidebarOpen(!sidebarOpen);
     };
+
+    const onClick = () => {
+      alert ("EM BREVE!")
+    }
+
   
     return (
       <div className={styles.navbar}>
@@ -28,6 +33,8 @@ const HomeNavBarComponent: React.FC = () => {
               <li><a href="/ranking">Ranking</a></li>
               <li><a href="/certification">Certificação</a></li>
               <li><a href="/CertificationRequest">Solicite Sua Certificação</a></li>
+              <li><a href="#" onClick={onClick}>Relatórios</a></li>
+              <li> <a href="/">Sair</a></li>
             </ul>
           </div>
         )}

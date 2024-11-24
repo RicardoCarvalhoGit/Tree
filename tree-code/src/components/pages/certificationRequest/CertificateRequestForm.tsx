@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './CertificateRequestForm.module.css';
+import HomeNavBarComponent from '@/components/layout/homeNavBar/homeNavBarComponent';
 
 const CertificateRequestForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -85,6 +86,8 @@ const CertificateRequestForm: React.FC = () => {
     
 
     return (
+        <>
+        <HomeNavBarComponent />
         <form onSubmit={handleSubmit} className={styles.formContainer}>
             <h2 className={styles.title}>Solicitação de Certificação Ecológica</h2>
 
@@ -199,6 +202,7 @@ const CertificateRequestForm: React.FC = () => {
 
             <button type="submit" onClick={handleSubmit} className={styles.submitButton}>Enviar Solicitação</button>
         </form>
+    </>
     );
 };
 
