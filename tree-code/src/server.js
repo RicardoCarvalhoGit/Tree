@@ -189,6 +189,28 @@ app.get("/api/requests", (req, res) => {
   });
 });
 
+// Endpoint para manipular solicitações
+router.put("/requests/:id", async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+
+  const query = "UPDATE certificados SET status = ? WHERE id = ?";
+  db.query(query, [status, id], (err, result) => {
+    if (err) {
+      console.error("Erro na query:", err);
+      return res.status(500).json({ message: "Erro ao atualizar o status" });
+    }
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ message: "ID não encontrado" });
+    }
+
+    res.status(200).json({ message: "Status atualizado com sucesso" });
+  });
+});
+
+
+
 app.listen(3001, () => {
   console.log("Servidor rodando na porta 3001");
 });

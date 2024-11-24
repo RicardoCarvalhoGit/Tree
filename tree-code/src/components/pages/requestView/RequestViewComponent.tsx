@@ -16,34 +16,67 @@ interface Request {
 }
 
 const RequestViewComponent: React.FC = () => {
-  const [requests, setRequests] = useState<Request[]>([]); // Estado para armazenar as solicitações
-  const [loading, setLoading] = useState<boolean>(false); // Estado de carregamento
-  const [error, setError] = useState<string>(""); // Estado para erro
+  const [requests, setRequests] = useState<Request[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [selectedRequest, setSelectedRequest] = useState<Request | null>(null);
 
   // Função para buscar solicitações
   const fetchRequests = async () => {
-    setLoading(true); // Inicia o carregamento
-    setError(""); // Reseta o erro antes de tentar carregar
-
+    setLoading(true);
+    setError("");
     try {
-      const response = await axios.get("http://localhost:3001/api/requests"); // Endereço da API no backend
-      setRequests(response.data); // Atualiza o estado com as solicitações
+      const response = await axios.get("http://localhost:3001/api/requests");
+      setRequests(response.data);
     } catch (err) {
-      setError("Erro ao buscar solicitações"); // Caso ocorra erro, atualiza o estado de erro
+      setError("Erro ao buscar solicitações");
     } finally {
-      setLoading(false); // Finaliza o carregamento, independentemente do sucesso ou erro
+      setLoading(false);
     }
   };
 
-  // Função fictícia para lidar com o clique no botão "Ver Detalhes"
+  // Função para lidar com o clique no botão "Ver Detalhes"
   const handleRequestClick = (id: number) => {
-    console.log(`Ver detalhes da solicitação com ID: ${id}`);
+    const request = requests.find((request) => request.id === id);
+    if (request) {
+      setSelectedRequest(request);
+      setModalOpen(true);
+    }
+  };
+
+  // Função para atualizar o status da solicitação
+  const updateRequestStatus = async (status: string) => {
+    if (selectedRequest) {
+      try {
+        await axios.put(`http://localhost:3001/api/requests/${selectedRequest.id}`, {
+          status,
+        });
+        setRequests((prevRequests) =>
+          prevRequests.map((request) =>
+            request.id === selectedRequest.id
+              ? { ...request, status }
+              : request
+          )
+        );
+        setSelectedRequest((prev) =>
+          prev ? { ...prev, status } : null
+        );
+      } catch (err) {
+        setError("Erro ao atualizar status");
+      }
+    }
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedRequest(null);
   };
 
   return (
     <div className={styles.container}>
       <h1>Solicitações Pendentes</h1>
-      
+
       {/* Botão para buscar as solicitações */}
       <button onClick={fetchRequests} disabled={loading} className={styles.fetchButton}>
         {loading ? "Carregando..." : "Buscar Solicitações"}
@@ -54,7 +87,7 @@ const RequestViewComponent: React.FC = () => {
 
       {/* Exibe o erro caso aconteça */}
       {error && <p className={styles.error}>{error}</p>}
-      
+
       {/* Exibe as solicitações caso não haja erro e o carregamento tenha terminado */}
       {!loading && !error && (
         <table>
@@ -84,6 +117,51 @@ const RequestViewComponent: React.FC = () => {
           </tbody>
         </table>
       )}
+
+      {/* Modal de detalhes da solicitação */}
+      {modalOpen && selectedRequest && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h2>Detalhes da Solicitação</h2>
+            <p><strong>Razão Social:</strong> {selectedRequest.razao_social}</p>
+            <p><strong>CNPJ:</strong> {selectedRequest.cnpj}</p>
+            <p><strong>Endereço:</strong> {selectedRequest.endereco}</p>
+            <p><strong>Setor:</strong> {selectedRequest.setor}</p>
+            <p><strong>Contato:</strong> {selectedRequest.contato_nome}</p>
+            <p><strong>Email:</strong> {selectedRequest.contato_email}</p>
+            <p><strong>Telefone:</strong> {selectedRequest.contato_telefone}</p>
+            <p><strong>Práticas Sustentáveis:</strong> {selectedRequest.particas_sustentaveis}</p>
+            <p><strong>Status:</strong> {selectedRequest.status}</p>
+
+            <div className={styles.modalButtons}>
+              {selectedRequest.status === "pendente" ? (
+                <>
+                  <button
+                    onClick={() => updateRequestStatus("aprovado")}
+                    className={styles.approveButton}
+                  >
+                    Aprovar Solicitação
+                  </button>
+                  <button
+                    onClick={() => updateRequestStatus("recusado")}
+                    className={styles.rejectButton}
+                  >
+                    Recusar Solicitação
+                  </button>
+                </>
+              ) : (
+                <button className={styles.emailButton}>
+                  Enviar E-mail
+                </button>
+              )}
+              <button onClick={closeModal} className={styles.closeModalButton}>
+                Fechar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
