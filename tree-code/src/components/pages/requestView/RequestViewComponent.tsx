@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios"; // Para fazer a requisição HTTP
-import styles from './RequestViewComponent.module.css'; // Importa o CSS
+import axios from "axios"; 
+import styles from './RequestViewComponent.module.css'; 
+import HomeNavBarComponent from "@/components/layout/homeNavBar/homeNavBarComponent";
 
 interface Request {
   id: number;
@@ -21,8 +22,10 @@ const RequestViewComponent: React.FC = () => {
   const [error, setError] = useState<string>("");
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [selectedRequest, setSelectedRequest] = useState<Request | null>(null);
+  const [showFileUpload, setShowFileUpload] = useState(false);
 
-  // Função para buscar solicitações
+
+ 
   const fetchRequests = async () => {
     setLoading(true);
     setError("");
@@ -36,7 +39,7 @@ const RequestViewComponent: React.FC = () => {
     }
   };
 
-  // Função para lidar com o clique no botão "Ver Detalhes"
+
   const handleRequestClick = (id: number) => {
     const request = requests.find((request) => request.id === id);
     if (request) {
@@ -74,21 +77,21 @@ const RequestViewComponent: React.FC = () => {
   };
 
   return (
+    <>
+    <HomeNavBarComponent />
     <div className={styles.container}>
       <h1>Solicitações Pendentes</h1>
 
-      {/* Botão para buscar as solicitações */}
+     
       <button onClick={fetchRequests} disabled={loading} className={styles.fetchButton}>
         {loading ? "Carregando..." : "Buscar Solicitações"}
       </button>
 
-      {/* Exibe o status de carregamento */}
+     
       {loading && <p className={styles.loading}>Carregando solicitações...</p>}
 
-      {/* Exibe o erro caso aconteça */}
       {error && <p className={styles.error}>{error}</p>}
 
-      {/* Exibe as solicitações caso não haja erro e o carregamento tenha terminado */}
       {!loading && !error && (
         <table>
           <thead>
@@ -149,10 +152,25 @@ const RequestViewComponent: React.FC = () => {
                     Recusar Solicitação
                   </button>
                 </>
-              ) : (
-                <button className={styles.emailButton}>
-                  Enviar E-mail
-                </button>
+              ) : null}
+              {selectedRequest.status === "aprovado" && (
+                <>
+                  <button
+                    onClick={() => setShowFileUpload(!showFileUpload)}
+                    className={styles.emailButton}
+                  >
+                    Enviar E-mail
+                  </button>
+                  {showFileUpload && (
+                    <div className={styles.fileUploadBox}>
+                      <p>Anexe o certificado:</p>
+                      <input type="file" />
+                      <button className={styles.submitEmailButton}>
+                        Confirmar Envio
+                      </button>
+                    </div>
+                  )}
+                </>
               )}
               <button onClick={closeModal} className={styles.closeModalButton}>
                 Fechar
@@ -161,8 +179,8 @@ const RequestViewComponent: React.FC = () => {
           </div>
         </div>
       )}
-
     </div>
+    </>
   );
 };
 

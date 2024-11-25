@@ -9,32 +9,32 @@
   min-height: calc(100vh - 132px);
 }
 
-h1 {
+.container h1 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
   text-align: center;
 }
 
-table {
+.container table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-th, td {
+.container th, td {
   padding: 12px;
   text-align: left;
   border: 1px solid #ddd;
 }
 
-th {
+.container th {
   background-color: #f4f4f4;
   color: #333;
   font-weight: bold;
 }
 
-td {
+.container td {
   background-color: #fafafa;
   color: #555;
 }
@@ -43,7 +43,6 @@ td {
 button {
   padding: 8px 16px;
   background-color: #3B7861;
-  border: 2px solid #3B7861;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -92,19 +91,19 @@ button:hover {
   animation: slideUp 0.3s ease-out;
 }
 
-h2 {
+.container h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
 }
 
-p {
+.container p {
   font-size: 16px;
   color: #555;
   margin: 5px 0;
 }
 
-strong {
+.container strong {
   color: #333;
 }
 
@@ -167,6 +166,31 @@ strong {
   border: 2px solid #3B7861;
   color: #3B7861;
 }
+
+.fileUploadBox {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.submitEmailButton {
+  background-color: #3B7861;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.submitEmailButton:hover {
+  background-color: #ffffff;
+  border: 2px solid #3B7861;
+  color: #3B7861;
+}
+
 
 @keyframes fadeIn {
   from {

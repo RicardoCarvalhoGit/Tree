@@ -7,7 +7,7 @@ function HomePage() {
         <>
             <HomeNavBarComponent />
             <section className="hero">
-                <h1>Portal Empresarial de Certificações Sustentáveis</h1>
+                <h1>Portal Empresarial de Certificação Ecologoica</h1>
                 <p>
                     Gerencie suas certificações ecológicas, acompanhe métricas e mantenha
                     sua empresa em conformidade com os mais altos padrões de
