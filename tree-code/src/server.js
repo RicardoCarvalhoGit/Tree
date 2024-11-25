@@ -2,16 +2,50 @@ const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const bcrypt = require('bcrypt'); 
+const bcrypt = require('bcrypt');
 const mysql = require('mysql2');
 const router = express.Router();
+const nodemailer = require("nodemailer");
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs'); 
 
 const app = express();
 const prisma = new PrismaClient();
 
+// Criar pasta uploads se não existir
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
+
+// Configuração do Multer
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './uploads/'); // Destino dos arquivos enviados
+  },
+  filename: (req, file, cb) => {
+    cb(null, `Certificado-${Date.now()}.pdf`); // Nome do arquivo com timestamp
+  },
+});
+
+const upload = multer({ storage: storage });
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api", router);
+
+require("dotenv").config();
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+  debug: true, 
+  logger: true, 
+});
 
 const hashPassword = async (password) => {
   const saltRounds = 10;
@@ -209,8 +243,60 @@ router.put("/requests/:id", async (req, res) => {
   });
 });
 
+// Endpoint para mandar email com nodemailer
+app.post('/send-email', upload.single('file'), async (req, res) => {
+  console.log(req.file)
+  const { id } = req.body;
 
+  if (!id) {
+    return res.status(400).json({ error: "ID da solicitação é obrigatório." });
+  }
 
+  if (!req.file) {
+    return res.status(400).json({ error: "Arquivo não encontrado." });
+  }
+
+  try {
+    const [solicitacao] = await db.promise().query(
+      "SELECT contato_email, razao_social FROM certificados WHERE id = ?",
+      [id]
+    );
+
+    if (solicitacao.length === 0) {
+      return res.status(404).json({ error: "Solicitação não encontrada." });
+    }
+
+    const { contato_email: toEmail, razao_social } = solicitacao[0];
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: toEmail,
+      subject: "Seu Certificado Sustentável Está Pronto!",
+      text: `Olá, ${razao_social}!\n\nReconhecemos seu compromisso com a sustentabilidade ambiental e o meio ambiente. Segue em anexo o certificado ecológico emitido para sua empresa. Parabéns pela iniciativa!`,
+      attachments: [
+        {
+          filename: req.file.filename, 
+          path: req.file.path, 
+        },
+      ],
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error("Erro ao enviar o e-mail:", error);
+        return res.status(500).json({ error: "Erro ao enviar o e-mail." });
+      }
+
+      res.status(200).json({ message: "E-mail enviado com sucesso!", info });
+    });
+  } catch (error) {
+    console.error('Erro no servidor:', error);
+    res.status(500).send('Erro ao enviar o e-mail.');
+  }
+
+});
+
+// Inicializando o servidor
 app.listen(3001, () => {
-  console.log("Servidor rodando na porta 3001");
+  console.log('Servidor rodando na porta 3001');
 });

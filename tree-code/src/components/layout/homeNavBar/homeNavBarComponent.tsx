@@ -31,7 +31,7 @@ const HomeNavBarComponent: React.FC = () => {
             <ul>
               <li><a href="/about">Home</a></li>
               <li><a href="/ranking">Ranking</a></li>
-              <li><a href="/certification">Certificação</a></li>
+              <li><a href="/certification">Sobre a certificação</a></li>
               <li><a href="/CertificationRequest">Solicite Sua Certificação</a></li>
               <li><a href="#" onClick={onClick}>Relatórios</a></li>
               <li> <a href="/">Sair</a></li>

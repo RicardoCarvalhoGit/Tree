@@ -23,8 +23,42 @@ const RequestViewComponent: React.FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [selectedRequest, setSelectedRequest] = useState<Request | null>(null);
   const [showFileUpload, setShowFileUpload] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
 
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      setSelectedFile(event.target.files[0]);
+    }
+  };
+  
+  const sendEmail = async () => {
+    if (!selectedRequest) {
+      setError("Nenhuma solicitação selecionada.");
+      return;
+    }
+  
+    if (!selectedFile) {
+      setError("Por favor, selecione um certificado para anexar.");
+      return;
+    }
+  
+    const formData = new FormData();
+    formData.append("id", selectedRequest.id.toString());
+    formData.append("file", selectedFile);
+  
+    try {
+      const response = await axios.post("http://localhost:3001/send-email", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+  
+      alert("E-mail enviado com sucesso!");
+    } catch (err) {
+      console.error("Erro ao enviar e-mail:", err);
+      setError("Erro ao enviar o e-mail.");
+    }
+  };
+  
  
   const fetchRequests = async () => {
     setLoading(true);
@@ -164,8 +198,8 @@ const RequestViewComponent: React.FC = () => {
                   {showFileUpload && (
                     <div className={styles.fileUploadBox}>
                       <p>Anexe o certificado:</p>
-                      <input type="file" />
-                      <button className={styles.submitEmailButton}>
+                      <input type="file" onChange={handleFileChange} />
+                      <button className={styles.submitEmailButton} onClick={sendEmail}>
                         Confirmar Envio
                       </button>
                     </div>

@@ -27,15 +27,15 @@ model cadastro_cliente {
 }
 
 model certificados {
-  id                      Int       @id @default(autoincrement())
-  razao_social            String    @db.Text
-  documento_indetificacao String?   @db.Text
-  cnpj                    String?   @db.Text
-  endereco                String?   @db.Text
-  setor                   String?   @db.Text
-  contato_nome            String?   @db.Text
-  contato_email           String?   @db.Text
-  contato_telefone        String?   @db.Text
-  particas_sustentaveis   String?   @db.Text
-  status                  String    @default("pendente")
+  id                      Int     @id @default(autoincrement())
+  razao_social            String  @db.Text
+  documento_indetificacao String? @db.Text
+  cnpj                    String? @db.Text
+  endereco                String? @db.Text
+  setor                   String? @db.Text
+  contato_nome            String? @db.Text
+  contato_email           String? @db.Text
+  contato_telefone        String? @db.Text
+  particas_sustentaveis   String? @db.Text
+  status                  String  @default("pendente")
 }
