@@ -7,6 +7,15 @@ export const Partners = () => {
 
     const logosArray = Array(6).fill([
         { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
+        { src: SuaLogo, alt: "Sua Logo aqui vetor" },
     ]).flat();    
 
     return (

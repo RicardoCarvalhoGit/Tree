@@ -20,28 +20,30 @@ function AppContent() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.ctrlKey && event.key === "q") {
-        event.preventDefault(); // Evita comportamento padrão
-        setIsModalOpen(true); // Abre o modal
+        event.preventDefault();
+        setIsModalOpen(true);
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown); // Limpa o listener
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
+  const IsLandingPage = ["/", "/signIn", "/signUp"].includes(location.pathname);
+
   return (
-    <>
-      {(location.pathname !== '/about' && location.pathname !== '/certification' && location.pathname !== '/requestView' && location.pathname !== '/ranking' && location.pathname !== '/CertificationRequest') && <NavBar />}
+    <> 
+      {IsLandingPage && <NavBar />}
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/signIn' element={<SignIn />} />
         <Route path='/signUp' element={<SignUp />} />
         <Route path='/ranking' element={<Ranking />} />
         <Route path='/certification' element={<Certification />} />
-        <Route path='/about' element={<HomePage />} />
+        <Route path='/home' element={<HomePage />} />
         <Route path='/certificationRequest' element={<CertificateRequestForm />} />
         <Route path='/requestView' element={<RequestViewComponent />} />
       </Routes>

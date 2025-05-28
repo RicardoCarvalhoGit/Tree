@@ -98,7 +98,8 @@ function SignUp () {
                                     placeholder='Nome da empresa'
                                     value={formData.nome_emp}
                                     onChange={handleInputChange}
-                                    required>
+                                    required={signUpType === 'cnpj'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='CNPJ_emp'>
@@ -109,7 +110,8 @@ function SignUp () {
                                     placeholder='CNPJ'
                                     value={formData.CNPJ_emp}
                                     onChange={handleInputChange} 
-                                    required>
+                                    required={signUpType === 'cnpj'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='email_emp'>
@@ -120,7 +122,8 @@ function SignUp () {
                                     placeholder='E-mail'
                                     value={formData.email_emp}
                                     onChange={handleInputChange} 
-                                    required>
+                                    required={signUpType === 'cnpj'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='contato_emp'>
@@ -131,7 +134,8 @@ function SignUp () {
                                     placeholder='Contato'
                                     value={formData.contato_emp}
                                     onChange={handleInputChange} 
-                                    required>
+                                    required={signUpType === 'cnpj'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='endereco_emp'>
@@ -142,7 +146,8 @@ function SignUp () {
                                     placeholder='Endereço'
                                     value={formData.endereco_emp}
                                     onChange={handleInputChange}
-                                    required>
+                                    required={signUpType === 'cnpj'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='senha_emp'>
@@ -153,7 +158,8 @@ function SignUp () {
                                     placeholder='Sua senha'
                                     value={formData.senha_emp}
                                     onChange={handleInputChange} 
-                                    required>
+                                    required={signUpType === 'cnpj'}
+                                >
                                     </input>
                             </label>
                             <label className={styles.label_input} htmlFor='confirmar_senha'>
@@ -162,7 +168,8 @@ function SignUp () {
                                     id='confirmar_senha' 
                                     type='password' 
                                     placeholder='Confirme sua senha' 
-                                    required>
+                                    required={signUpType === 'cnpj'}
+                                >
                                 </input>
                             </label>
                             <a href='/signIn' className={styles.forgotten_password}>Já tem cadastro? Clique aqui para fazer LogIn</a>
@@ -188,7 +195,8 @@ function SignUp () {
                                     placeholder='Seu nome'
                                     value={formData.nome}
                                     onChange={handleInputChange}
-                                    required>
+                                    required={signUpType === 'cpf'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='cpf'>
@@ -199,7 +207,8 @@ function SignUp () {
                                     placeholder='CPF'
                                     value={formData.cpf}
                                     onChange={handleInputChange}
-                                    required>
+                                    required={signUpType === 'cpf'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='email'>
@@ -210,7 +219,8 @@ function SignUp () {
                                     placeholder='E-mail'
                                     value={formData.email}
                                     onChange={handleInputChange} 
-                                    required>
+                                    required={signUpType === 'cpf'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='telefone'>
@@ -221,7 +231,8 @@ function SignUp () {
                                     placeholder='Contato'
                                     value={formData.telefone}
                                     onChange={handleInputChange}
-                                    required>
+                                    required={signUpType === 'cpf'}
+                                >
                                 </input>
                             </label>    
                             <label className={styles.label_input} htmlFor='senha'>
@@ -232,7 +243,8 @@ function SignUp () {
                                     placeholder='Sua senha'
                                     value={formData.senha}
                                     onChange={handleInputChange}
-                                    required>
+                                    required={signUpType === 'cpf'}
+                                >
                                 </input>
                             </label>
                             <label className={styles.label_input} htmlFor='confirm_senha'>
@@ -241,7 +253,8 @@ function SignUp () {
                                     id='confirm_senha' 
                                     type='password' 
                                     placeholder='Confirme sua senha' 
-                                    required>
+                                    required={signUpType === 'cpf'}
+                                >
                                 </input>
                             </label>
                             <a href='/signIn' className={styles.forgotten_password}>Já tem cadastro? Clique aqui para fazer LogIn</a>

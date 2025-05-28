@@ -87,7 +87,8 @@ function SignIn () {
                                 placeholder='CNPJ'
                                 value={formData.CNPJ_emp}
                                 onChange={handleInputChange}
-                                required>
+                                required={loginType === 'cnpj'}
+                            >
                             </input>
                         </label>
                         <label className={styles.label_input} htmlFor='email_emp'>
@@ -98,7 +99,8 @@ function SignIn () {
                                 placeholder='E-mail'
                                 value={formData.email_emp}
                                 onChange={handleInputChange}
-                                required>
+                                required={loginType === 'cnpj'}
+                            >
                             </input>
                         </label>
                         <label className={styles.label_input} htmlFor='senha_emp'>
@@ -109,7 +111,8 @@ function SignIn () {
                                 placeholder='Sua senha'
                                 value={formData.senha_emp}
                                 onChange={handleInputChange}
-                                required>
+                                required={loginType === 'cnpj'}
+                            >
                             </input>
                         </label>
                         <div className={styles.forgotten_password}>
@@ -137,7 +140,8 @@ function SignIn () {
                                 placeholder='CPF'
                                 value={formData.cpf}
                                 onChange={handleInputChange}
-                                required>
+                                required={loginType === 'cpf'}
+                            >
                             </input>
                         </label>
                         <label className={styles.label_input} htmlFor='email'>
@@ -148,7 +152,8 @@ function SignIn () {
                                 placeholder='E-mail'
                                 value={formData.email}
                                 onChange={handleInputChange}
-                                required>
+                                required={loginType === 'cpf'}
+                            >
                             </input>
                         </label>
                         <label className={styles.label_input} htmlFor='senha'>
@@ -159,7 +164,8 @@ function SignIn () {
                                 placeholder='Sua senha'
                                 value={formData.senha}
                                 onChange={handleInputChange}
-                                required>
+                                required={loginType === 'cpf'}
+                            >
                             </input>
                         </label>
                         <a href='signUp' className={styles.forgotten_password}>Não tem cadastro? Clique aqui para se cadastrar</a>
