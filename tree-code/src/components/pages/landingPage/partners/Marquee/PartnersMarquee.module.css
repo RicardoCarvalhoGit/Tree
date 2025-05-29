@@ -33,11 +33,12 @@
 
 .logosSlide {
     display: inline-block;
-    animation: 15s slide infinite linear;
+    animation: 120s slide infinite linear;
 }
 
 .logosSlide img {
-    height: 150px;
+    height: 120px;
+    max-width: 200px;
     margin: 0 40px;
 }
 
@@ -47,11 +48,12 @@
 
 .logosSlideReverse {
     display: inline-block;
-    animation: 15s slide infinite linear reverse;
+    animation: 120s slide infinite linear reverse;
 }
 
 .logosSlideReverse img {
-    height: 150px;
+    height: 120px;
+    max-width: 200px;
     margin: 0 40px;
 }
 
